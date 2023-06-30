@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C727573B2A4E6CE10028C496 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C727573A2A4E6CE10028C496 /* ApiRequest.swift */; };
+		C727573D2A4E6D6C0028C496 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C727573C2A4E6D6C0028C496 /* URLSession.swift */; };
 		C773AD302A4E63C200AE959C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C773AD2F2A4E63C200AE959C /* AppDelegate.swift */; };
 		C773AD322A4E63C200AE959C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C773AD312A4E63C200AE959C /* SceneDelegate.swift */; };
 		C773AD342A4E63C200AE959C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C773AD332A4E63C200AE959C /* ViewController.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C727573A2A4E6CE10028C496 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
+		C727573C2A4E6D6C0028C496 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
 		C773AD2C2A4E63C200AE959C /* RecipiFi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipiFi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C773AD2F2A4E63C200AE959C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C773AD312A4E63C200AE959C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C72757392A4E6C9F0028C496 /* ApiRequests */ = {
+			isa = PBXGroup;
+			children = (
+				C727573A2A4E6CE10028C496 /* ApiRequest.swift */,
+				C727573C2A4E6D6C0028C496 /* URLSession.swift */,
+			);
+			path = ApiRequests;
+			sourceTree = "<group>";
+		};
 		C773AD232A4E63C200AE959C = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +202,7 @@
 		C773AD662A4E6A2D00AE959C /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				C72757392A4E6C9F0028C496 /* ApiRequests */,
 				C773AD672A4E6A5300AE959C /* ApiService.swift */,
 			);
 			path = Network;
@@ -327,7 +341,9 @@
 			files = (
 				C773AD342A4E63C200AE959C /* ViewController.swift in Sources */,
 				C773AD302A4E63C200AE959C /* AppDelegate.swift in Sources */,
+				C727573D2A4E6D6C0028C496 /* URLSession.swift in Sources */,
 				C773AD682A4E6A5300AE959C /* ApiService.swift in Sources */,
+				C727573B2A4E6CE10028C496 /* ApiRequest.swift in Sources */,
 				C773AD322A4E63C200AE959C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
