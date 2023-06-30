@@ -16,6 +16,7 @@
 		C773AD472A4E63C400AE959C /* RecipiFiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C773AD462A4E63C400AE959C /* RecipiFiTests.swift */; };
 		C773AD512A4E63C400AE959C /* RecipiFiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C773AD502A4E63C400AE959C /* RecipiFiUITests.swift */; };
 		C773AD532A4E63C400AE959C /* RecipiFiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C773AD522A4E63C400AE959C /* RecipiFiUITestsLaunchTests.swift */; };
+		C773AD682A4E6A5300AE959C /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C773AD672A4E6A5300AE959C /* ApiService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		C773AD4C2A4E63C400AE959C /* RecipiFiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipiFiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C773AD502A4E63C400AE959C /* RecipiFiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipiFiUITests.swift; sourceTree = "<group>"; };
 		C773AD522A4E63C400AE959C /* RecipiFiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipiFiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C773AD672A4E6A5300AE959C /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +101,9 @@
 		C773AD2E2A4E63C200AE959C /* RecipiFi */ = {
 			isa = PBXGroup;
 			children = (
-				C773AD2F2A4E63C200AE959C /* AppDelegate.swift */,
-				C773AD312A4E63C200AE959C /* SceneDelegate.swift */,
-				C773AD332A4E63C200AE959C /* ViewController.swift */,
+				C773AD652A4E6A1A00AE959C /* Managers */,
+				C773AD5F2A4E640A00AE959C /* AppDelegate */,
+				C773AD622A4E64C700AE959C /* Modules */,
 				C773AD352A4E63C200AE959C /* Main.storyboard */,
 				C773AD382A4E63C400AE959C /* Assets.xcassets */,
 				C773AD3A2A4E63C400AE959C /* LaunchScreen.storyboard */,
@@ -125,6 +127,71 @@
 				C773AD522A4E63C400AE959C /* RecipiFiUITestsLaunchTests.swift */,
 			);
 			path = RecipiFiUITests;
+			sourceTree = "<group>";
+		};
+		C773AD5F2A4E640A00AE959C /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				C773AD2F2A4E63C200AE959C /* AppDelegate.swift */,
+				C773AD312A4E63C200AE959C /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		C773AD602A4E642100AE959C /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				C773AD612A4E648F00AE959C /* View Controllers */,
+				C773AD632A4E650600AE959C /* View Models */,
+				C773AD642A4E651600AE959C /* Views */,
+			);
+			path = Recipes;
+			sourceTree = "<group>";
+		};
+		C773AD612A4E648F00AE959C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C773AD332A4E63C200AE959C /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		C773AD622A4E64C700AE959C /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C773AD602A4E642100AE959C /* Recipes */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C773AD632A4E650600AE959C /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		C773AD642A4E651600AE959C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C773AD652A4E6A1A00AE959C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				C773AD662A4E6A2D00AE959C /* Network */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		C773AD662A4E6A2D00AE959C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C773AD672A4E6A5300AE959C /* ApiService.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +327,7 @@
 			files = (
 				C773AD342A4E63C200AE959C /* ViewController.swift in Sources */,
 				C773AD302A4E63C200AE959C /* AppDelegate.swift in Sources */,
+				C773AD682A4E6A5300AE959C /* ApiService.swift in Sources */,
 				C773AD322A4E63C200AE959C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
