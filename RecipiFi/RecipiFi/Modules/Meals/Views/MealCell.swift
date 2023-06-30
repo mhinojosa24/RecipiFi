@@ -14,6 +14,12 @@ class MealCell: UITableViewCell {
     
     static var reuseIdentifier: String { String(describing: self) }
     
+    var model: Meal? {
+        didSet {
+            // call method to update cell UI
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

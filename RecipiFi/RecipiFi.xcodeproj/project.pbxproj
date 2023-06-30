@@ -28,6 +28,7 @@
 		C773AD682A4E6A5300AE959C /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C773AD672A4E6A5300AE959C /* ApiService.swift */; };
 		C7B049EB2A4F2A08004C1C7A /* MealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B049E92A4F2A08004C1C7A /* MealCell.swift */; };
 		C7B049EC2A4F2A08004C1C7A /* MealCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7B049EA2A4F2A08004C1C7A /* MealCell.xib */; };
+		C7B049EE2A4F2F35004C1C7A /* TableViewDiffableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B049ED2A4F2F35004C1C7A /* TableViewDiffableDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		C773AD672A4E6A5300AE959C /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		C7B049E92A4F2A08004C1C7A /* MealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCell.swift; sourceTree = "<group>"; };
 		C7B049EA2A4F2A08004C1C7A /* MealCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealCell.xib; sourceTree = "<group>"; };
+		C7B049ED2A4F2F35004C1C7A /* TableViewDiffableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDiffableDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				C727574C2A4E96BC0028C496 /* MealsVM.swift */,
+				C7B049ED2A4F2F35004C1C7A /* TableViewDiffableDataSource.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7B049EE2A4F2F35004C1C7A /* TableViewDiffableDataSource.swift in Sources */,
 				C773AD342A4E63C200AE959C /* MealsVC.swift in Sources */,
 				C727574B2A4E96530028C496 /* BaseVM.swift in Sources */,
 				C72757412A4E71F70028C496 /* NetworkError.swift in Sources */,
