@@ -6,22 +6,42 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MealCell: UITableViewCell {
 
     @IBOutlet weak var thumbnail: UIImageView!
+    @IBOutlet weak var thumbnailGradient: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     
     static var reuseIdentifier: String { String(describing: self) }
     
     var model: Meal? {
         didSet {
-            // call method to update cell UI
+            setup()
         }
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        thumbnail.image = nil
+        thumbnail.kf.cancelDownloadTask()
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        thumbnail.layer.cornerRadius = 20
+        thumbnailGradient.layer.cornerRadius = 20
+    }
+    
+    private func setup() {
+        guard
+            let model = model,
+            let imageUrl = URL(string: model.strMealThumb ?? ""),
+            let title = model.strMeal
+        else { return }
+        
+        titleLabel.text = title
+        thumbnail.kf.setImage(with: imageUrl, placeholder: UIImage(systemName: "photo.fill"), options: [.transition(.fade(1)), .cacheOriginalImage])
     }
 }
