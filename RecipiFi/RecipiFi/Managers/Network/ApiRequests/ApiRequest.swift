@@ -13,9 +13,9 @@ class ApiRequest<T> {
     private(set) var endpoint: Any
     var parser: (Any) -> T?
     
-    init(endpoint: Any) {
+    init(endpoint: EndPoint) {
         self.endpoint = endpoint
-        self.url = url
+        self.url = endpoint.url
         self.parser = { _ in
             nil
         }
