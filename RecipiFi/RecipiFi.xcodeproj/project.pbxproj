@@ -11,6 +11,9 @@
 		C727573D2A4E6D6C0028C496 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C727573C2A4E6D6C0028C496 /* URLSession.swift */; };
 		C727573F2A4E6F850028C496 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C727573E2A4E6F850028C496 /* EndPoint.swift */; };
 		C72757412A4E71F70028C496 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72757402A4E71F70028C496 /* NetworkError.swift */; };
+		C72757432A4E7FA90028C496 /* GetDessertMeals.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72757422A4E7FA90028C496 /* GetDessertMeals.swift */; };
+		C72757462A4E82110028C496 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72757452A4E82110028C496 /* Response.swift */; };
+		C72757482A4E82770028C496 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72757472A4E82770028C496 /* Meal.swift */; };
 		C773AD302A4E63C200AE959C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C773AD2F2A4E63C200AE959C /* AppDelegate.swift */; };
 		C773AD322A4E63C200AE959C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C773AD312A4E63C200AE959C /* SceneDelegate.swift */; };
 		C773AD342A4E63C200AE959C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C773AD332A4E63C200AE959C /* ViewController.swift */; };
@@ -45,6 +48,9 @@
 		C727573C2A4E6D6C0028C496 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
 		C727573E2A4E6F850028C496 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		C72757402A4E71F70028C496 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		C72757422A4E7FA90028C496 /* GetDessertMeals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDessertMeals.swift; sourceTree = "<group>"; };
+		C72757452A4E82110028C496 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		C72757472A4E82770028C496 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		C773AD2C2A4E63C200AE959C /* RecipiFi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipiFi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C773AD2F2A4E63C200AE959C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C773AD312A4E63C200AE959C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,9 +96,18 @@
 			isa = PBXGroup;
 			children = (
 				C727573A2A4E6CE10028C496 /* ApiRequest.swift */,
-				C72757402A4E71F70028C496 /* NetworkError.swift */,
+				C72757422A4E7FA90028C496 /* GetDessertMeals.swift */,
 			);
 			path = ApiRequests;
+			sourceTree = "<group>";
+		};
+		C72757442A4E80CC0028C496 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				C72757452A4E82110028C496 /* Response.swift */,
+				C72757472A4E82770028C496 /* Meal.swift */,
+			);
+			path = "Data Model";
 			sourceTree = "<group>";
 		};
 		C773AD232A4E63C200AE959C = {
@@ -206,10 +221,12 @@
 		C773AD662A4E6A2D00AE959C /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				C72757442A4E80CC0028C496 /* Data Model */,
 				C72757392A4E6C9F0028C496 /* ApiRequests */,
 				C773AD672A4E6A5300AE959C /* ApiService.swift */,
 				C727573E2A4E6F850028C496 /* EndPoint.swift */,
 				C727573C2A4E6D6C0028C496 /* URLSession.swift */,
+				C72757402A4E71F70028C496 /* NetworkError.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -349,9 +366,12 @@
 				C72757412A4E71F70028C496 /* NetworkError.swift in Sources */,
 				C773AD302A4E63C200AE959C /* AppDelegate.swift in Sources */,
 				C727573D2A4E6D6C0028C496 /* URLSession.swift in Sources */,
+				C72757482A4E82770028C496 /* Meal.swift in Sources */,
+				C72757462A4E82110028C496 /* Response.swift in Sources */,
 				C773AD682A4E6A5300AE959C /* ApiService.swift in Sources */,
 				C727573B2A4E6CE10028C496 /* ApiRequest.swift in Sources */,
 				C727573F2A4E6F850028C496 /* EndPoint.swift in Sources */,
+				C72757432A4E7FA90028C496 /* GetDessertMeals.swift in Sources */,
 				C773AD322A4E63C200AE959C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -544,6 +564,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = FetchTakeHome.RecipiFi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SERVER_URL = themealdb.com;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -572,6 +593,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = FetchTakeHome.RecipiFi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SERVER_URL = themealdb.com;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

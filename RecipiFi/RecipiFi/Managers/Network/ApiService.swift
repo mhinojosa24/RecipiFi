@@ -8,7 +8,7 @@
 import Foundation
 
 
-typealias ApiHandler<T> = (Result<T, Error>) -> Void
+typealias ApiHandler<T> = (Result<T?, Error>) -> Void
 
 protocol Service {
     func request<T: Decodable>(_ request: ApiRequest<T>, completionHandler: @escaping ApiHandler<T>)
@@ -32,16 +32,16 @@ class ApiService: Service {
                 completionHandler(.failure(NetworkError.responseError))
             }
             
-            
+            self.handleResponse(data, resource: request, handler: completionHandler)
         })
     }
     
-    private func handleResponse<T>(_ data: Data?, response: ApiRequest<T>, handler: @escaping ApiHandler<T>) {
+    private func handleResponse<T>(_ data: Data?, resource: ApiRequest<T>, handler: @escaping ApiHandler<T>) {
         if let data = data {
             do {
-                let response = try JSONSerialization.data(withJSONObject: data) as? [String: Any]
-                handler(.success())
-            } catch let error {
+                let response: Response = try JSONDecoder().decode(Response.self, from: data)
+                handler(.success(resource.parser(response)))
+            } catch {
                 handler(.failure(NetworkError.decodingError))
             }
         }

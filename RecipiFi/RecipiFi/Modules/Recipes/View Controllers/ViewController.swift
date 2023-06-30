@@ -11,7 +11,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let service = ApiService()
+        service.request(GetDessertMeals()) { result in
+            switch result {
+            case .success:
+                break
+            case .failure:
+                break
+            }
+        }
     }
 
 
