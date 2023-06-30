@@ -16,20 +16,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZuG-4O-BvW">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Z9P-NQ-l2b">
                                 <rect key="frame" x="0.0" y="155" width="393" height="697"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <constraints>
-                            <constraint firstItem="ZuG-4O-BvW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2wA-eZ-FId"/>
-                            <constraint firstItem="ZuG-4O-BvW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FXB-or-tAH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZuG-4O-BvW" secondAttribute="trailing" id="IKE-yM-hh4"/>
-                            <constraint firstAttribute="bottom" secondItem="ZuG-4O-BvW" secondAttribute="bottom" id="gz8-f5-Zwb"/>
+                            <constraint firstAttribute="bottom" secondItem="Z9P-NQ-l2b" secondAttribute="bottom" id="KSB-G6-gmQ"/>
+                            <constraint firstItem="Z9P-NQ-l2b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YKO-j1-ltl"/>
+                            <constraint firstItem="Z9P-NQ-l2b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cjf-aL-GhN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z9P-NQ-l2b" secondAttribute="trailing" id="hsC-jk-2qA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Meals" id="WIu-UL-xxT"/>
+                    <connections>
+                        <outlet property="tableView" destination="Z9P-NQ-l2b" id="rXf-O6-1rR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

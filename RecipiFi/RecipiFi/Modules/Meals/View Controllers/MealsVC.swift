@@ -8,10 +8,12 @@
 import UIKit
 
 class MealsVC: UIViewController {
-
+    @IBOutlet var tableView: UITableView!
+    
     let viewModel = MealsVM()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.view.backgroundColor = .systemBackground
     }
 }
