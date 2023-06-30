@@ -9,9 +9,9 @@ import Foundation
 
 
 struct Meal: Decodable, Hashable {
-    let strMeal: String
-    let strMealThumb: String
-    let idMeal: String
+    let strMeal: String?
+    let strMealThumb: String?
+    let idMeal: String?
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(idMeal)

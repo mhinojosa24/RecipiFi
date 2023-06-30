@@ -19,7 +19,7 @@ class MealsVM: BaseVM {
         service?.request(GetDessertMeals()) { result in
             switch result {
             case .success(let meals):
-                if let meals = meals {
+                if let meals = meals { 
                     self.updateDataSource(with: meals)
                 }
             case .failure(let error):

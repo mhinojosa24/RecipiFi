@@ -15,6 +15,8 @@ class MealsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        setupObservers()
+        viewModel.callApiToGetDessertMeals()
     }
     
     private func configureUI() {
@@ -22,7 +24,7 @@ class MealsVC: UIViewController {
         let mealCell = UINib(nibName: String(describing: MealCell.self), bundle: nil)
         tableView.delegate = self
         tableView.register(mealCell, forCellReuseIdentifier: MealCell.reuseIdentifier)
-        tableView.rowHeight = 100
+        tableView.rowHeight = 200
     }
     
     private func setupObservers() {
