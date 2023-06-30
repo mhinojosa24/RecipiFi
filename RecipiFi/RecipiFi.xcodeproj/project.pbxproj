@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		690E0B41A251FE22AAB3B20B /* Pods_RecipiFi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EAB098128A419E1E4AEB6D /* Pods_RecipiFi.framework */; };
 		C727573B2A4E6CE10028C496 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C727573A2A4E6CE10028C496 /* ApiRequest.swift */; };
 		C727573D2A4E6D6C0028C496 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C727573C2A4E6D6C0028C496 /* URLSession.swift */; };
 		C727573F2A4E6F850028C496 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C727573E2A4E6F850028C496 /* EndPoint.swift */; };
@@ -49,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A7EAB098128A419E1E4AEB6D /* Pods_RecipiFi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipiFi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDBA25139D8CDA5238F69930 /* Pods-RecipiFi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipiFi.release.xcconfig"; path = "Target Support Files/Pods-RecipiFi/Pods-RecipiFi.release.xcconfig"; sourceTree = "<group>"; };
 		C727573A2A4E6CE10028C496 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		C727573C2A4E6D6C0028C496 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
 		C727573E2A4E6F850028C496 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
@@ -75,6 +78,7 @@
 		C7B049E92A4F2A08004C1C7A /* MealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCell.swift; sourceTree = "<group>"; };
 		C7B049EA2A4F2A08004C1C7A /* MealCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealCell.xib; sourceTree = "<group>"; };
 		C7B049ED2A4F2F35004C1C7A /* TableViewDiffableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDiffableDataSource.swift; sourceTree = "<group>"; };
+		F716FE5C51FDAC33EA6846AA /* Pods-RecipiFi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipiFi.debug.xcconfig"; path = "Target Support Files/Pods-RecipiFi/Pods-RecipiFi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				690E0B41A251FE22AAB3B20B /* Pods_RecipiFi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +140,8 @@
 				C773AD452A4E63C400AE959C /* RecipiFiTests */,
 				C773AD4F2A4E63C400AE959C /* RecipiFiUITests */,
 				C773AD2D2A4E63C200AE959C /* Products */,
+				D1FDAD5D59656EA8CCB4CA03 /* Pods */,
+				F89FCF58681708C6D201CA52 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -254,6 +261,23 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		D1FDAD5D59656EA8CCB4CA03 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F716FE5C51FDAC33EA6846AA /* Pods-RecipiFi.debug.xcconfig */,
+				BDBA25139D8CDA5238F69930 /* Pods-RecipiFi.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F89FCF58681708C6D201CA52 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7EAB098128A419E1E4AEB6D /* Pods_RecipiFi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -261,9 +285,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C773AD562A4E63C400AE959C /* Build configuration list for PBXNativeTarget "RecipiFi" */;
 			buildPhases = (
+				8DC599A44F8F729EA724B16C /* [CP] Check Pods Manifest.lock */,
 				C773AD282A4E63C200AE959C /* Sources */,
 				C773AD292A4E63C200AE959C /* Frameworks */,
 				C773AD2A2A4E63C200AE959C /* Resources */,
+				7C37C68449FEC73987D631CE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -334,7 +360,7 @@
 				};
 			};
 			buildConfigurationList = C773AD272A4E63C200AE959C /* Build configuration list for PBXProject "RecipiFi" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -380,6 +406,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7C37C68449FEC73987D631CE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RecipiFi/Pods-RecipiFi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RecipiFi/Pods-RecipiFi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RecipiFi/Pods-RecipiFi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DC599A44F8F729EA724B16C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RecipiFi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C773AD282A4E63C200AE959C /* Sources */ = {
@@ -572,6 +640,7 @@
 		};
 		C773AD572A4E63C400AE959C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F716FE5C51FDAC33EA6846AA /* Pods-RecipiFi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -583,8 +652,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -593,14 +662,18 @@
 				PRODUCT_BUNDLE_IDENTIFIER = FetchTakeHome.RecipiFi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SERVER_URL = themealdb.com;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		C773AD582A4E63C400AE959C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDBA25139D8CDA5238F69930 /* Pods-RecipiFi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -612,8 +685,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -622,9 +695,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = FetchTakeHome.RecipiFi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SERVER_URL = themealdb.com;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

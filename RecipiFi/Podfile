@@ -1,0 +1,7 @@
+platform :ios, '14.0'
+
+target 'RecipiFi' do
+  use_frameworks!
+  pod 'Kingfisher', '7.6.1'
+
+end
