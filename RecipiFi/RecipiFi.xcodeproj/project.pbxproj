@@ -182,14 +182,14 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
-		C773AD602A4E642100AE959C /* Recipes */ = {
+		C773AD602A4E642100AE959C /* Meals */ = {
 			isa = PBXGroup;
 			children = (
 				C773AD612A4E648F00AE959C /* View Controllers */,
 				C773AD632A4E650600AE959C /* View Models */,
 				C773AD642A4E651600AE959C /* Views */,
 			);
-			path = Recipes;
+			path = Meals;
 			sourceTree = "<group>";
 		};
 		C773AD612A4E648F00AE959C /* View Controllers */ = {
@@ -204,7 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				C72757492A4E96400028C496 /* Base */,
-				C773AD602A4E642100AE959C /* Recipes */,
+				C773AD602A4E642100AE959C /* Meals */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
