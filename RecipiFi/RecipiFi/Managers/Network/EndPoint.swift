@@ -40,4 +40,14 @@ extension EndPoint {
             .init(name: "i", value: mealID)
         ])
     }
+    
+    static func getIngredientImageURL(ingredient: String) -> URL {
+        let fallbackURL = URL(string: "https://www.themealdb.com/images/ingredients/Flour-Small.png")
+        if let urlString = "https://www.themealdb.com/images/ingredients/\(ingredient)-Small.png"
+            .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+           let url = URL(string: urlString) {
+            return url
+        }
+        return fallbackURL!
+    }
 }
