@@ -11,6 +11,7 @@ import Foundation
 struct IngredientDetail: Decodable, Hashable {
     let id: String
     let ingredient: String
+    let ingredientImageURL: URL
     let measurement: String
     
     func hash(into hasher: inout Hasher) {
