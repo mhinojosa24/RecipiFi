@@ -11,7 +11,7 @@ import Foundation
 class ApiRequest<T> {
     private(set) var url: URL
     private(set) var endpoint: Any
-    var parser: (Response) -> T?
+    var parser: (JSONDictionary) -> T?
     
     init(endpoint: EndPoint) {
         self.endpoint = endpoint

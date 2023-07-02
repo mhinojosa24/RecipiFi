@@ -7,11 +7,11 @@
 
 import Foundation
 
-
+typealias JSONDictionary = [String: Any]
 typealias ApiHandler<T> = (Result<T?, Error>) -> Void
 
 protocol Service {
-    func request<T: Decodable>(_ request: ApiRequest<T>, completionHandler: @escaping ApiHandler<T>)
+    func request<T>(_ request: ApiRequest<T>, completionHandler: @escaping ApiHandler<T>)
 }
 
 
@@ -22,7 +22,7 @@ class ApiService: Service {
         self.session = session
     }
     
-    func request<T: Decodable>(_ request: ApiRequest<T>, completionHandler: @escaping ApiHandler<T>) {
+    func request<T>(_ request: ApiRequest<T>, completionHandler: @escaping ApiHandler<T>) {
         session?.request(request.url, then: { data, response, error in
             if let error = error {
                 completionHandler(.failure(error))
@@ -39,8 +39,9 @@ class ApiService: Service {
     private func handleResponse<T>(_ data: Data?, resource: ApiRequest<T>, handler: @escaping ApiHandler<T>) {
         if let data = data {
             do {
-                let response: Response = try JSONDecoder().decode(Response.self, from: data)
-                handler(.success(resource.parser(response)))
+                if let json = try JSONSerialization.jsonObject(with: data) as? JSONDictionary {
+                    handler(.success(resource.parser(json)))
+                }
             } catch {
                 handler(.failure(NetworkError.decodingError))
             }

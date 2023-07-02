@@ -34,4 +34,10 @@ extension EndPoint {
             .init(name: "c", value: "Dessert")
         ])
     }
+    
+    static func getMealDetails(mealID: String) -> Self {
+        EndPoint(path: "/api/json/v1/1/lookup.php", queryItems: [
+            .init(name: "i", value: mealID)
+        ])
+    }
 }
