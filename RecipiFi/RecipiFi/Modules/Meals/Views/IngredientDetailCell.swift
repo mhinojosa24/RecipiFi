@@ -22,8 +22,15 @@ class IngredientDetailCell: UITableViewCell {
         }
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        ingredientImageView.image = nil
+        ingredientImageView.kf.cancelDownloadTask()
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        ingredientImageView.layer.cornerRadius = 10
     }
     
     private func setup() {
