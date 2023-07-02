@@ -36,6 +36,8 @@
 		C7B049FA2A4F59A7004C1C7A /* IngredientDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B049F92A4F59A7004C1C7A /* IngredientDetail.swift */; };
 		C7B049FC2A4FA509004C1C7A /* MealDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B049FB2A4FA509004C1C7A /* MealDetail.swift */; };
 		C7B049FE2A511C78004C1C7A /* MealsDetailTableViewDiffableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B049FD2A511C78004C1C7A /* MealsDetailTableViewDiffableDataSource.swift */; };
+		C7B04A012A51246F004C1C7A /* IngredientDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B049FF2A51246F004C1C7A /* IngredientDetailCell.swift */; };
+		C7B04A022A51246F004C1C7A /* IngredientDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7B04A002A51246F004C1C7A /* IngredientDetailCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,8 @@
 		C7B049F92A4F59A7004C1C7A /* IngredientDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientDetail.swift; sourceTree = "<group>"; };
 		C7B049FB2A4FA509004C1C7A /* MealDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealDetail.swift; sourceTree = "<group>"; };
 		C7B049FD2A511C78004C1C7A /* MealsDetailTableViewDiffableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsDetailTableViewDiffableDataSource.swift; sourceTree = "<group>"; };
+		C7B049FF2A51246F004C1C7A /* IngredientDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientDetailCell.swift; sourceTree = "<group>"; };
+		C7B04A002A51246F004C1C7A /* IngredientDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientDetailCell.xib; sourceTree = "<group>"; };
 		F716FE5C51FDAC33EA6846AA /* Pods-RecipiFi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipiFi.debug.xcconfig"; path = "Target Support Files/Pods-RecipiFi/Pods-RecipiFi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -254,6 +258,8 @@
 			children = (
 				C7B049E92A4F2A08004C1C7A /* MealCell.swift */,
 				C7B049EA2A4F2A08004C1C7A /* MealCell.xib */,
+				C7B049FF2A51246F004C1C7A /* IngredientDetailCell.swift */,
+				C7B04A002A51246F004C1C7A /* IngredientDetailCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -406,6 +412,7 @@
 				C773AD3C2A4E63C400AE959C /* LaunchScreen.storyboard in Resources */,
 				C773AD392A4E63C400AE959C /* Assets.xcassets in Resources */,
 				C773AD372A4E63C200AE959C /* Main.storyboard in Resources */,
+				C7B04A022A51246F004C1C7A /* IngredientDetailCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +500,7 @@
 				C7B049FC2A4FA509004C1C7A /* MealDetail.swift in Sources */,
 				C72757432A4E7FA90028C496 /* GetDessertMeals.swift in Sources */,
 				C773AD322A4E63C200AE959C /* SceneDelegate.swift in Sources */,
+				C7B04A012A51246F004C1C7A /* IngredientDetailCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
