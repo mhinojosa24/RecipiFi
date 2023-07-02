@@ -6,8 +6,12 @@
 //
 
 import Foundation
+import UIKit
 
 
 class MealDetailVM: BaseVM {
+    
+    var datasource: MealsDetailTableViewDiffableDataSource!
+    var snapshot = NSDiffableDataSourceSnapshot<String?, IngredientDetail>()
     var model: MealDetail?
 }
