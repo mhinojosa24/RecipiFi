@@ -14,6 +14,7 @@ class MealsVM: BaseVM {
     
     var datasource: TableViewDiffableDataSource!
     var snapshot = NSDiffableDataSourceSnapshot<String?, Meal>()
+    @Published var mealID: String = ""
     
     func callApiToGetDessertMeals() {
         service?.request(GetDessertMeals()) { result in
@@ -26,6 +27,22 @@ class MealsVM: BaseVM {
                 print(error.localizedDescription)
             }
         }
+    }
+    
+    func callApiToGetMealDetailInfo(mealID: String, completionHandler: @escaping (MealDetail?) -> Void) {
+        service?.request(GetMealDetails(mealID: mealID), completionHandler: { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let detailModel):
+                    if let model = detailModel as? MealDetail {
+                        completionHandler(model)
+                    }
+                case .failure(let error):
+                    print("Error: \(error.localizedDescription)")
+                    completionHandler(nil)
+                }
+            }
+        })
     }
     
     private func updateDataSource(with meals: [Meal]) {

@@ -32,6 +32,9 @@
 		C7B049EE2A4F2F35004C1C7A /* TableViewDiffableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B049ED2A4F2F35004C1C7A /* TableViewDiffableDataSource.swift */; };
 		C7B049F22A4F4FAA004C1C7A /* MealDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B049F12A4F4FAA004C1C7A /* MealDetailVC.swift */; };
 		C7B049F42A4F5014004C1C7A /* MealDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B049F32A4F5014004C1C7A /* MealDetailVM.swift */; };
+		C7B049F62A4F5346004C1C7A /* GetMealDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B049F52A4F5346004C1C7A /* GetMealDetails.swift */; };
+		C7B049FA2A4F59A7004C1C7A /* IngredientDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B049F92A4F59A7004C1C7A /* IngredientDetail.swift */; };
+		C7B049FC2A4FA509004C1C7A /* MealDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B049FB2A4FA509004C1C7A /* MealDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +85,9 @@
 		C7B049ED2A4F2F35004C1C7A /* TableViewDiffableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDiffableDataSource.swift; sourceTree = "<group>"; };
 		C7B049F12A4F4FAA004C1C7A /* MealDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailVC.swift; sourceTree = "<group>"; };
 		C7B049F32A4F5014004C1C7A /* MealDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailVM.swift; sourceTree = "<group>"; };
+		C7B049F52A4F5346004C1C7A /* GetMealDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMealDetails.swift; sourceTree = "<group>"; };
+		C7B049F92A4F59A7004C1C7A /* IngredientDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientDetail.swift; sourceTree = "<group>"; };
+		C7B049FB2A4FA509004C1C7A /* MealDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealDetail.swift; sourceTree = "<group>"; };
 		F716FE5C51FDAC33EA6846AA /* Pods-RecipiFi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipiFi.debug.xcconfig"; path = "Target Support Files/Pods-RecipiFi/Pods-RecipiFi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +122,7 @@
 			children = (
 				C727573A2A4E6CE10028C496 /* ApiRequest.swift */,
 				C72757422A4E7FA90028C496 /* GetDessertMeals.swift */,
+				C7B049F52A4F5346004C1C7A /* GetMealDetails.swift */,
 			);
 			path = ApiRequests;
 			sourceTree = "<group>";
@@ -125,6 +132,8 @@
 			children = (
 				C72757452A4E82110028C496 /* Response.swift */,
 				C72757472A4E82770028C496 /* Meal.swift */,
+				C7B049FB2A4FA509004C1C7A /* MealDetail.swift */,
+				C7B049F92A4F59A7004C1C7A /* IngredientDetail.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -465,16 +474,19 @@
 				C7B049F42A4F5014004C1C7A /* MealDetailVM.swift in Sources */,
 				C727574B2A4E96530028C496 /* BaseVM.swift in Sources */,
 				C72757412A4E71F70028C496 /* NetworkError.swift in Sources */,
+				C7B049FA2A4F59A7004C1C7A /* IngredientDetail.swift in Sources */,
 				C7B049F22A4F4FAA004C1C7A /* MealDetailVC.swift in Sources */,
 				C773AD302A4E63C200AE959C /* AppDelegate.swift in Sources */,
 				C7B049EB2A4F2A08004C1C7A /* MealCell.swift in Sources */,
 				C727573D2A4E6D6C0028C496 /* URLSession.swift in Sources */,
 				C72757482A4E82770028C496 /* Meal.swift in Sources */,
+				C7B049F62A4F5346004C1C7A /* GetMealDetails.swift in Sources */,
 				C727574D2A4E96BC0028C496 /* MealsVM.swift in Sources */,
 				C72757462A4E82110028C496 /* Response.swift in Sources */,
 				C773AD682A4E6A5300AE959C /* ApiService.swift in Sources */,
 				C727573B2A4E6CE10028C496 /* ApiRequest.swift in Sources */,
 				C727573F2A4E6F850028C496 /* EndPoint.swift in Sources */,
+				C7B049FC2A4FA509004C1C7A /* MealDetail.swift in Sources */,
 				C72757432A4E7FA90028C496 /* GetDessertMeals.swift in Sources */,
 				C773AD322A4E63C200AE959C /* SceneDelegate.swift in Sources */,
 			);

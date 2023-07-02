@@ -9,5 +9,5 @@ import Foundation
 
 
 class MealDetailVM: BaseVM {
-    
+    var model: MealDetail?
 }
