@@ -20,8 +20,9 @@ extension MealDetail {
     func parseIngredientDetail(response: JSONDictionary) -> [IngredientDetail] {
         var ingredientInfo = [IngredientDetail]()
         for i in 1...20 {
+            let mealID = UUID().uuidString
             if let ingredient = response["strIngredient\(i)"] as? String, let measurement = response["strMeasure\(i)"] as? String, !ingredient.isEmpty && !measurement.isEmpty {
-                ingredientInfo.append(.init(ingredient: ingredient, measurement: measurement))
+                ingredientInfo.append(.init(id: mealID, ingredient: ingredient, measurement: measurement))
             } else {
                 break
             }

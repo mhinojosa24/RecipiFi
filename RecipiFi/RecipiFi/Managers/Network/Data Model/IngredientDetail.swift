@@ -8,7 +8,16 @@
 import Foundation
 
 
-struct IngredientDetail: Decodable {
+struct IngredientDetail: Decodable, Hashable {
+    let id: String
     let ingredient: String
     let measurement: String
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
+    static func == (lhs: IngredientDetail, rhs: IngredientDetail) -> Bool {
+        lhs.id == rhs.id
+    }
 }

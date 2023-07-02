@@ -35,6 +35,7 @@
 		C7B049F62A4F5346004C1C7A /* GetMealDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B049F52A4F5346004C1C7A /* GetMealDetails.swift */; };
 		C7B049FA2A4F59A7004C1C7A /* IngredientDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B049F92A4F59A7004C1C7A /* IngredientDetail.swift */; };
 		C7B049FC2A4FA509004C1C7A /* MealDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B049FB2A4FA509004C1C7A /* MealDetail.swift */; };
+		C7B049FE2A511C78004C1C7A /* MealsDetailTableViewDiffableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B049FD2A511C78004C1C7A /* MealsDetailTableViewDiffableDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		C7B049F52A4F5346004C1C7A /* GetMealDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMealDetails.swift; sourceTree = "<group>"; };
 		C7B049F92A4F59A7004C1C7A /* IngredientDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientDetail.swift; sourceTree = "<group>"; };
 		C7B049FB2A4FA509004C1C7A /* MealDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealDetail.swift; sourceTree = "<group>"; };
+		C7B049FD2A511C78004C1C7A /* MealsDetailTableViewDiffableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsDetailTableViewDiffableDataSource.swift; sourceTree = "<group>"; };
 		F716FE5C51FDAC33EA6846AA /* Pods-RecipiFi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipiFi.debug.xcconfig"; path = "Target Support Files/Pods-RecipiFi/Pods-RecipiFi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -242,6 +244,7 @@
 				C727574C2A4E96BC0028C496 /* MealsVM.swift */,
 				C7B049F32A4F5014004C1C7A /* MealDetailVM.swift */,
 				C7B049ED2A4F2F35004C1C7A /* MealsTableViewDiffableDataSource.swift */,
+				C7B049FD2A511C78004C1C7A /* MealsDetailTableViewDiffableDataSource.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7B049EE2A4F2F35004C1C7A /* MealsTableViewDiffableDataSource.swift in Sources */,
+				C7B049FE2A511C78004C1C7A /* MealsDetailTableViewDiffableDataSource.swift in Sources */,
 				C773AD342A4E63C200AE959C /* MealsVC.swift in Sources */,
 				C7B049F42A4F5014004C1C7A /* MealDetailVM.swift in Sources */,
 				C727574B2A4E96530028C496 /* BaseVM.swift in Sources */,
