@@ -16,7 +16,7 @@ class IngredientDetailCell: UITableViewCell {
     
     static var reuseIdentifier: String { String(describing: self) }
     
-    var model: IngredientDetailCell? {
+    var model: IngredientDetail? {
         didSet {
             setup()
         }
@@ -27,7 +27,10 @@ class IngredientDetailCell: UITableViewCell {
     }
     
     private func setup() {
-        guard let imageUrl = URL(string: "") else { return }
+        guard let model = model else { return }
+        ingredientImageView.kf.setImage(with: model.ingredientImageURL, placeholder: UIImage(named: "photo.fill"), options: [.transition(.fade(1)), .cacheOriginalImage])
+        ingredientName.text = model.ingredient
+        measurement.text = model.measurement
     }
     
 }

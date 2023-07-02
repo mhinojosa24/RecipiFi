@@ -62,11 +62,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="fWz-bk-0DX"/>
             <connections>
-                <outlet property="accountIcn" destination="EJw-2T-0Da" id="ewt-OQ-P2e"/>
                 <outlet property="ingredientImageView" destination="EJw-2T-0Da" id="blM-tb-TFw"/>
                 <outlet property="ingredientName" destination="zhP-Ir-6Zj" id="BvJ-Cg-I4z"/>
                 <outlet property="measurement" destination="I5r-bX-bd1" id="ifo-Cz-Tf5"/>
-                <outlet property="titleLabel" destination="zhP-Ir-6Zj" id="fgM-Hc-gcn"/>
             </connections>
             <point key="canvasLocation" x="198.55072463768118" y="127.90178571428571"/>
         </tableViewCell>
