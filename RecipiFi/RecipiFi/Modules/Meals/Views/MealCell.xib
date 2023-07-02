@@ -25,8 +25,8 @@
                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sh-m8-TJD" userLabel="Title Label">
-                        <rect key="frame" x="20" y="95" width="345" height="24"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                        <rect key="frame" x="30" y="81.666666666666671" width="345" height="27.333333333333329"/>
+                        <fontDescription key="fontDescription" name="AlNile" family="Al Nile" pointSize="20"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -36,11 +36,11 @@
                     <constraint firstItem="JK8-uJ-MTx" firstAttribute="trailing" secondItem="imQ-v6-7cZ" secondAttribute="trailing" id="DRL-EO-Nbe"/>
                     <constraint firstAttribute="trailing" secondItem="imQ-v6-7cZ" secondAttribute="trailing" constant="10" id="NdL-v5-fV5"/>
                     <constraint firstAttribute="bottom" secondItem="imQ-v6-7cZ" secondAttribute="bottom" constant="10" id="dfP-LJ-Uou"/>
-                    <constraint firstItem="8sh-m8-TJD" firstAttribute="trailing" secondItem="imQ-v6-7cZ" secondAttribute="trailing" constant="10" id="f2S-6h-G6b"/>
+                    <constraint firstItem="8sh-m8-TJD" firstAttribute="trailing" secondItem="imQ-v6-7cZ" secondAttribute="trailing" constant="20" id="f2S-6h-G6b"/>
                     <constraint firstItem="JK8-uJ-MTx" firstAttribute="leading" secondItem="imQ-v6-7cZ" secondAttribute="leading" id="hKj-lN-aZH"/>
-                    <constraint firstItem="imQ-v6-7cZ" firstAttribute="bottom" secondItem="8sh-m8-TJD" secondAttribute="bottom" constant="10" id="hOL-Bc-RzA"/>
+                    <constraint firstItem="imQ-v6-7cZ" firstAttribute="bottom" secondItem="8sh-m8-TJD" secondAttribute="bottom" constant="20" id="hOL-Bc-RzA"/>
                     <constraint firstItem="JK8-uJ-MTx" firstAttribute="top" secondItem="imQ-v6-7cZ" secondAttribute="top" id="kgY-lL-Dpi"/>
-                    <constraint firstItem="8sh-m8-TJD" firstAttribute="leading" secondItem="imQ-v6-7cZ" secondAttribute="leading" constant="10" id="kuc-B8-hfP"/>
+                    <constraint firstItem="8sh-m8-TJD" firstAttribute="leading" secondItem="imQ-v6-7cZ" secondAttribute="leading" constant="20" id="kuc-B8-hfP"/>
                     <constraint firstItem="imQ-v6-7cZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="qYh-9G-Aqs"/>
                     <constraint firstItem="imQ-v6-7cZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="tPz-Th-2vM"/>
                 </constraints>

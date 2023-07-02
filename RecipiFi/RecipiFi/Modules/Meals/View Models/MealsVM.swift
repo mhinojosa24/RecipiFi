@@ -12,7 +12,7 @@ import UIKit
 
 class MealsVM: BaseVM {
     
-    var datasource: TableViewDiffableDataSource!
+    var datasource: MealsTableViewDiffableDataSource!
     var snapshot = NSDiffableDataSourceSnapshot<String?, Meal>()
     @Published var mealID: String = ""
     

@@ -30,7 +30,7 @@ class MealsVC: UIViewController {
     }
     
     private func setupObservers() {
-        viewModel.datasource = TableViewDiffableDataSource(tableView: tableView, cellProvider: { tableView, indexPath, model in
+        viewModel.datasource = MealsTableViewDiffableDataSource(tableView: tableView, cellProvider: { tableView, indexPath, model in
             guard let cell = tableView.dequeueReusableCell(withIdentifier: MealCell.reuseIdentifier, for: indexPath) as? MealCell else {
                 return UITableViewCell()
             }
