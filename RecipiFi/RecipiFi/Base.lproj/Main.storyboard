@@ -46,16 +46,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8O8-mv-D6G" userLabel="ThumbnailImageView">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8O8-mv-D6G" userLabel="ThumbnailImageView">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="3r2-J7-gSL"/>
                                 </constraints>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ThumnailGradient" translatesAutoresizingMaskIntoConstraints="NO" id="qnN-zV-uZM">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="250"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jbq-Y1-e6L" userLabel="Title Label">
                                 <rect key="frame" x="20" y="202.66666666666666" width="393" height="27.333333333333343"/>
                                 <fontDescription key="fontDescription" name="AlNile-Bold" family="Al Nile" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4LZ-Rf-DIS">
@@ -72,9 +75,13 @@
                             <constraint firstItem="Jbq-Y1-e6L" firstAttribute="leading" secondItem="8O8-mv-D6G" secondAttribute="leading" constant="20" id="HMW-8X-Gfc"/>
                             <constraint firstItem="8O8-mv-D6G" firstAttribute="leading" secondItem="Dxk-uL-IPS" secondAttribute="leading" id="IoQ-JW-wAH"/>
                             <constraint firstItem="Dxk-uL-IPS" firstAttribute="trailing" secondItem="4LZ-Rf-DIS" secondAttribute="trailing" id="Nu9-fZ-7Do"/>
+                            <constraint firstItem="qnN-zV-uZM" firstAttribute="trailing" secondItem="8O8-mv-D6G" secondAttribute="trailing" id="Pnv-vT-pU2"/>
                             <constraint firstItem="8O8-mv-D6G" firstAttribute="top" secondItem="RUZ-y7-p8v" secondAttribute="top" id="bl3-l3-fn2"/>
+                            <constraint firstItem="qnN-zV-uZM" firstAttribute="top" secondItem="8O8-mv-D6G" secondAttribute="top" id="c6x-8Z-t4l"/>
                             <constraint firstItem="8O8-mv-D6G" firstAttribute="trailing" secondItem="Dxk-uL-IPS" secondAttribute="trailing" id="dwU-6i-K2l"/>
+                            <constraint firstItem="qnN-zV-uZM" firstAttribute="bottom" secondItem="8O8-mv-D6G" secondAttribute="bottom" id="rQQ-PG-7BZ"/>
                             <constraint firstItem="8O8-mv-D6G" firstAttribute="bottom" secondItem="Jbq-Y1-e6L" secondAttribute="bottom" constant="20" id="seK-Nz-8eD"/>
+                            <constraint firstItem="qnN-zV-uZM" firstAttribute="leading" secondItem="8O8-mv-D6G" secondAttribute="leading" id="xoi-7u-TJX"/>
                         </constraints>
                     </view>
                     <connections>
@@ -107,6 +114,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ThumnailGradient" width="163" height="168"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
