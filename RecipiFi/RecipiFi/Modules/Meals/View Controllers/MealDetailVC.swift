@@ -25,12 +25,25 @@ class MealDetailVC: UIViewController {
     
     private func setupUI() {
         view.backgroundColor = self.traitCollection.userInterfaceStyle == .dark ? .black : .white
-        let ingredientDetailCell = UINib(nibName: String(describing: IngredientDetailCell.self), bundle: nil)
-        tableView.register(ingredientDetailCell, forCellReuseIdentifier: IngredientDetailCell.reuseIdentifier)
-        tableView.rowHeight = 58
+        setupIBOutlets()
+        setupTableView()
+    }
+    
+    private func setupIBOutlets() {
         guard let imageUrl = URL(string: viewModel.model?.strMealThumb ?? "") else { return }
         thumbnailImageView.kf.setImage(with: imageUrl, placeholder: UIImage(named: "photo.fill"), options: [.transition(.fade(1)), .cacheOriginalImage])
         titleLabel.text = viewModel.model?.strMeal ?? ""
+    }
+    
+    private func setupTableView() {
+        let ingredientDetailCell = UINib(nibName: String(describing: IngredientDetailCell.self), bundle: nil)
+        let headerView = UINib(nibName: String(describing: HeaderView.self), bundle: nil)
+        
+        tableView.delegate = self
+        tableView.register(ingredientDetailCell, forCellReuseIdentifier: IngredientDetailCell.reuseIdentifier)
+        tableView.register(headerView, forHeaderFooterViewReuseIdentifier: "HeaderView")
+        tableView.rowHeight = 58
+        tableView.sectionHeaderHeight = 58
     }
     
     private func setupObservers() {
@@ -39,5 +52,13 @@ class MealDetailVC: UIViewController {
             cell.model = model
             return cell
         })
+    }
+}
+
+extension MealDetailVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HeaderView") as? HeaderView
+        headerView?.numberOfItems = viewModel.model?.ingredientDetails?.count
+        return headerView
     }
 }
