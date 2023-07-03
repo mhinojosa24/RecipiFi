@@ -40,6 +40,7 @@
 		C7B04A022A51246F004C1C7A /* IngredientDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7B04A002A51246F004C1C7A /* IngredientDetailCell.xib */; };
 		C7B04A042A51D2CA004C1C7A /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B04A032A51D2CA004C1C7A /* HeaderView.swift */; };
 		C7B04A082A51E24B004C1C7A /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7B04A072A51E24B004C1C7A /* HeaderView.xib */; };
+		C7B04A0C2A53566C004C1C7A /* MealDetailSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B04A0B2A53566C004C1C7A /* MealDetailSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		C7B04A002A51246F004C1C7A /* IngredientDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientDetailCell.xib; sourceTree = "<group>"; };
 		C7B04A032A51D2CA004C1C7A /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		C7B04A072A51E24B004C1C7A /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		C7B04A0B2A53566C004C1C7A /* MealDetailSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailSection.swift; sourceTree = "<group>"; };
 		F716FE5C51FDAC33EA6846AA /* Pods-RecipiFi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipiFi.debug.xcconfig"; path = "Target Support Files/Pods-RecipiFi/Pods-RecipiFi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -253,6 +255,7 @@
 				C7B049F32A4F5014004C1C7A /* MealDetailVM.swift */,
 				C7B049ED2A4F2F35004C1C7A /* MealsTableViewDiffableDataSource.swift */,
 				C7B049FD2A511C78004C1C7A /* MealsDetailTableViewDiffableDataSource.swift */,
+				C7B04A0B2A53566C004C1C7A /* MealDetailSection.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 				C727573D2A4E6D6C0028C496 /* URLSession.swift in Sources */,
 				C72757482A4E82770028C496 /* Meal.swift in Sources */,
 				C7B049F62A4F5346004C1C7A /* GetMealDetails.swift in Sources */,
+				C7B04A0C2A53566C004C1C7A /* MealDetailSection.swift in Sources */,
 				C727574D2A4E96BC0028C496 /* MealsVM.swift in Sources */,
 				C72757462A4E82110028C496 /* Response.swift in Sources */,
 				C773AD682A4E6A5300AE959C /* ApiService.swift in Sources */,

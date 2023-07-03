@@ -13,6 +13,9 @@ class IngredientDetailCell: UITableViewCell {
     @IBOutlet weak var ingredientImageView: UIImageView!
     @IBOutlet weak var ingredientName: UILabel!
     @IBOutlet weak var measurement: UILabel!
+    @IBOutlet weak var instructionStackView: UIStackView!
+    @IBOutlet weak var ingredientStackView: UIStackView!
+    @IBOutlet weak var textView: UITextView!
     
     static var reuseIdentifier: String { String(describing: self) }
     
