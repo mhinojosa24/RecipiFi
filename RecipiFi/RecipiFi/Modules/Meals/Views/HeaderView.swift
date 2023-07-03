@@ -10,6 +10,8 @@ import UIKit
 class HeaderView: UITableViewHeaderFooterView {
     @IBOutlet weak var numberOfItemsLabel: UILabel!
     
+    static var reuseIdentifier: String { String(describing: self) }
+    
     var numberOfItems: Int? {
         didSet {
             setup()

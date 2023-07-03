@@ -10,10 +10,20 @@ import UIKit
 import Kingfisher
 
 class MealDetailVC: UIViewController {
+    
+    struct UIConstants {
+        let ingredientDetailCell = UINib(nibName: IngredientDetailCell.reuseIdentifier, bundle: nil)
+        let headerView = UINib(nibName: HeaderView.reuseIdentifier, bundle: nil)
+        let rowHeight: CGFloat = 58
+        let sectionHeaderHeight: CGFloat = 58
+        let placeHolderImage = UIImage(named: "photo.fill")
+    }
+    
     @IBOutlet var tableView: UITableView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var thumbnailImageView: UIImageView!
     
+    let uiConstants = UIConstants()
     var viewModel = MealDetailVM()
     
     override func viewDidLoad() {
@@ -31,19 +41,16 @@ class MealDetailVC: UIViewController {
     
     private func setupIBOutlets() {
         guard let imageUrl = URL(string: viewModel.model?.strMealThumb ?? "") else { return }
-        thumbnailImageView.kf.setImage(with: imageUrl, placeholder: UIImage(named: "photo.fill"), options: [.transition(.fade(1)), .cacheOriginalImage])
+        thumbnailImageView.kf.setImage(with: imageUrl, placeholder: uiConstants.placeHolderImage, options: [.transition(.fade(1)), .cacheOriginalImage])
         titleLabel.text = viewModel.model?.strMeal ?? ""
     }
     
     private func setupTableView() {
-        let ingredientDetailCell = UINib(nibName: String(describing: IngredientDetailCell.self), bundle: nil)
-        let headerView = UINib(nibName: String(describing: HeaderView.self), bundle: nil)
-        
         tableView.delegate = self
-        tableView.register(ingredientDetailCell, forCellReuseIdentifier: IngredientDetailCell.reuseIdentifier)
-        tableView.register(headerView, forHeaderFooterViewReuseIdentifier: "HeaderView")
-        tableView.rowHeight = 58
-        tableView.sectionHeaderHeight = 58
+        tableView.register(uiConstants.ingredientDetailCell, forCellReuseIdentifier: IngredientDetailCell.reuseIdentifier)
+        tableView.register(uiConstants.headerView, forHeaderFooterViewReuseIdentifier: HeaderView.reuseIdentifier)
+        tableView.rowHeight = uiConstants.rowHeight
+        tableView.sectionHeaderHeight = uiConstants.sectionHeaderHeight
     }
     
     private func setupObservers() {
@@ -57,7 +64,7 @@ class MealDetailVC: UIViewController {
 
 extension MealDetailVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HeaderView") as? HeaderView
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: HeaderView.reuseIdentifier) as? HeaderView
         headerView?.numberOfItems = viewModel.model?.ingredientDetails?.count
         return headerView
     }
