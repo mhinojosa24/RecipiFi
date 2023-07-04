@@ -23,7 +23,7 @@
                                     <rect key="frame" x="0.0" y="54" width="106" height="28"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="20"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1vK-Q6-GBl">
@@ -32,7 +32,7 @@
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Item" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AjM-Nw-Mrv">
                                     <rect key="frame" x="323" y="56" width="50" height="24"/>
                                     <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
@@ -49,7 +49,8 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="numberOfItemsLabel" destination="AjM-Nw-Mrv" id="0JO-cQ-3PE"/>
+                <outlet property="numberOfItemsLabel" destination="AjM-Nw-Mrv" id="wAW-eG-0zY"/>
+                <outlet property="titleLabel" destination="uhb-bq-Jwk" id="Vi5-ma-o0M"/>
             </connections>
             <point key="canvasLocation" x="155" y="307"/>
         </view>

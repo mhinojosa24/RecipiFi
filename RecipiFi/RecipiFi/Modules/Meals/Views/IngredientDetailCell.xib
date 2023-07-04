@@ -22,61 +22,63 @@
                 <rect key="frame" x="0.0" y="0.0" width="412" height="88"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QVq-1p-YRO">
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QVq-1p-YRO">
                         <rect key="frame" x="0.0" y="0.0" width="412" height="88"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fnA-uE-ZMN" userLabel="Instruction Stack View">
                                 <rect key="frame" x="0.0" y="0.0" width="412" height="88"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Pk-US-8Hl" userLabel="Spacer">
-                                        <rect key="frame" x="0.0" y="0.0" width="10" height="88"/>
+                                        <rect key="frame" x="0.0" y="19" width="10" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="10" id="1yS-x3-mM7"/>
                                         </constraints>
                                     </view>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SaV-FP-qcQ">
-                                        <rect key="frame" x="10" y="0.0" width="392" height="88"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36F-6d-zKD">
+                                        <rect key="frame" x="10" y="32" width="392" height="24"/>
+                                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xdb-Z1-IN4" userLabel="Spacer">
-                                        <rect key="frame" x="402" y="0.0" width="10" height="88"/>
+                                        <rect key="frame" x="402" y="19" width="10" height="50"/>
                                         <viewLayoutGuide key="safeArea" id="00x-Q6-crV"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="10" id="zuH-Q0-pME"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="fCd-5f-Gom"/>
-                                </constraints>
                             </stackView>
-                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="oNg-HF-jqU" userLabel="Ingredient Stack View">
-                                <rect key="frame" x="0.0" y="0.0" width="412" height="62.666666666666664"/>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oNg-HF-jqU" userLabel="Ingredient Stack View">
+                                <rect key="frame" x="0.0" y="88" width="412" height="62.666666666666657"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MQy-aA-cC7">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MQy-aA-cC7" userLabel="Spacer">
                                         <rect key="frame" x="0.0" y="0.0" width="10" height="62.666666666666664"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="10" id="dgj-pQ-l1L"/>
                                         </constraints>
                                     </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EJw-2T-0Da" userLabel="Ingredient Image View">
-                                        <rect key="frame" x="15" y="22.999999999999993" width="58" height="17.333333333333336"/>
+                                        <rect key="frame" x="10" y="22.999999999999993" width="50" height="17.333333333333336"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="58" id="0ea-nU-bRh"/>
+                                            <constraint firstAttribute="width" constant="50" id="0ea-nU-bRh"/>
                                         </constraints>
                                     </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7dj-T5-nYM" userLabel="Spacer">
+                                        <rect key="frame" x="60" y="0.0" width="15" height="62.666666666666664"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="15" id="aG3-YM-DfL"/>
+                                        </constraints>
+                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhP-Ir-6Zj" userLabel="Ingredient Name">
-                                        <rect key="frame" x="78" y="22" width="39.333333333333343" height="18.666666666666671"/>
+                                        <rect key="frame" x="75" y="22" width="39.333333333333343" height="18.666666666666671"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UCK-Dd-5mE" userLabel="Spacer">
-                                        <rect key="frame" x="122.33333333333331" y="4" width="207" height="54.666666666666664"/>
+                                        <rect key="frame" x="114.33333333333331" y="4" width="220" height="54.666666666666664"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="C5d-jk-VET">
@@ -111,21 +113,18 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="fWz-bk-0DX"/>
             <connections>
+                <outlet property="descriptionsLabel" destination="36F-6d-zKD" id="vCf-kN-tgn"/>
                 <outlet property="ingredientImageView" destination="EJw-2T-0Da" id="blM-tb-TFw"/>
                 <outlet property="ingredientName" destination="zhP-Ir-6Zj" id="BvJ-Cg-I4z"/>
                 <outlet property="ingredientStackView" destination="oNg-HF-jqU" id="x8Y-2v-nnp"/>
                 <outlet property="instructionStackView" destination="fnA-uE-ZMN" id="X0Y-VF-KwL"/>
                 <outlet property="measurement" destination="I5r-bX-bd1" id="ifo-Cz-Tf5"/>
-                <outlet property="textView" destination="SaV-FP-qcQ" id="kbm-eq-Hq8"/>
             </connections>
-            <point key="canvasLocation" x="198.47328244274809" y="142.95774647887325"/>
+            <point key="canvasLocation" x="200" y="139"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="photo.fill" catalog="system" width="128" height="93"/>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

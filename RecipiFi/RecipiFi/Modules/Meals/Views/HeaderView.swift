@@ -8,22 +8,19 @@
 import UIKit
 
 class HeaderView: UITableViewHeaderFooterView {
+    
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var numberOfItemsLabel: UILabel!
     
     static var reuseIdentifier: String { String(describing: self) }
-    
-    var numberOfItems: Int? {
-        didSet {
-            setup()
-        }
-    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    private func setup() {
-        guard let numberOfItems = numberOfItems else { return }
-        numberOfItemsLabel.text = "\(numberOfItems) item"
+    func setup(title: String, totalItems: Int, shouldDisplayNumberOfItems: Bool) {
+        titleLabel.text = title
+        numberOfItemsLabel.text = "\(totalItems) item"
+        numberOfItemsLabel.isHidden = !shouldDisplayNumberOfItems
     }
 }
