@@ -9,4 +9,4 @@ import Foundation
 import UIKit
 
 
-class MealsDetailTableViewDiffableDataSource: UITableViewDiffableDataSource<String?, IngredientDetail> {}
+class MealsDetailTableViewDiffableDataSource: UITableViewDiffableDataSource<MealDetailSection, AnyHashable> {}

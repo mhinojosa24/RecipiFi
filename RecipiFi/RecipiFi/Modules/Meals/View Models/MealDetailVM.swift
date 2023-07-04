@@ -12,16 +12,18 @@ import UIKit
 class MealDetailVM: BaseVM {
     
     var datasource: MealsDetailTableViewDiffableDataSource!
-    var snapshot = NSDiffableDataSourceSnapshot<String?, IngredientDetail>()
+    var snapshot = NSDiffableDataSourceSnapshot<MealDetailSection, AnyHashable>()
     var model: MealDetail?
     
     func updateDataSource() {
         DispatchQueue.main.async {
             guard self.datasource != nil else { return }
-            guard let items = self.model?.ingredientDetails else { return }
+            guard let model = self.model, let items = model.ingredientDetails else { return }
+            let instuctionItems: [InstructionsDetail] = [.init(id: UUID().uuidString, instructions: model.strInstructions ?? "")]
             self.snapshot.deleteAllItems()
-            self.snapshot.appendSections([""])
-            self.snapshot.appendItems(items, toSection: "")
+            self.snapshot.appendSections(MealDetailSection.allCases)
+            self.snapshot.appendItems(instuctionItems, toSection: .mealInstructions)
+            self.snapshot.appendItems(items, toSection: .mealIngredients)
             self.datasource.apply(self.snapshot, animatingDifferences: true)
         }
     }
