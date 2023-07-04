@@ -32,6 +32,7 @@ class MealCell: UITableViewCell {
         super.awakeFromNib()
         thumbnail.layer.cornerRadius = 20
         thumbnailGradient.layer.cornerRadius = 20
+        applyContentShadow()
     }
     
     private func setup() {
@@ -43,5 +44,12 @@ class MealCell: UITableViewCell {
         
         titleLabel.text = title
         thumbnail.kf.setImage(with: imageUrl, placeholder: UIImage(systemName: "photo.fill"), options: [.transition(.fade(1)), .cacheOriginalImage])
+    }
+    
+    private func applyContentShadow() {
+        contentView.layer.shadowColor = UIColor.black.cgColor
+        contentView.layer.shadowOpacity = 0.8
+        contentView.layer.shadowOffset = CGSize(width: 0, height: 0.5)
+        contentView.layer.shadowRadius = 3
     }
 }
