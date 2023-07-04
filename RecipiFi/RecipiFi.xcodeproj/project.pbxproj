@@ -191,6 +191,7 @@
 		C773AD2E2A4E63C200AE959C /* RecipiFi */ = {
 			isa = PBXGroup;
 			children = (
+				C7B04A192A54AA00004C1C7A /* UIComponents */,
 				C773AD652A4E6A1A00AE959C /* Managers */,
 				C773AD5F2A4E640A00AE959C /* AppDelegate */,
 				C773AD622A4E64C700AE959C /* Modules */,
@@ -277,7 +278,6 @@
 				C7B04A002A51246F004C1C7A /* IngredientDetailCell.xib */,
 				C7B04A032A51D2CA004C1C7A /* HeaderView.swift */,
 				C7B04A072A51E24B004C1C7A /* HeaderView.xib */,
-				C7B04A112A54A13F004C1C7A /* ProgressIndicator.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -301,6 +301,14 @@
 				C72757402A4E71F70028C496 /* NetworkError.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		C7B04A192A54AA00004C1C7A /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				C7B04A112A54A13F004C1C7A /* ProgressIndicator.swift */,
+			);
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 		D1FDAD5D59656EA8CCB4CA03 /* Pods */ = {
