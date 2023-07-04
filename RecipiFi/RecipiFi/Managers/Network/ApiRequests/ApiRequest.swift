@@ -8,6 +8,7 @@
 import Foundation
 
 
+/// This class is a blueprint of how an api request should look like 
 class ApiRequest<T> {
     private(set) var url: URL
     private(set) var endpoint: Any
