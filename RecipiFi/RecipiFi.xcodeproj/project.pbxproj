@@ -713,6 +713,7 @@
 				DEVELOPMENT_TEAM = 2D25YZNJAC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RecipiFi/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RecipiFi;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -746,6 +747,7 @@
 				DEVELOPMENT_TEAM = 2D25YZNJAC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RecipiFi/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RecipiFi;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
