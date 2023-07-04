@@ -49,14 +49,20 @@ class MealDetailVC: UIViewController {
         tableView.delegate = self
         tableView.register(uiConstants.ingredientDetailCell, forCellReuseIdentifier: IngredientDetailCell.reuseIdentifier)
         tableView.register(uiConstants.headerView, forHeaderFooterViewReuseIdentifier: HeaderView.reuseIdentifier)
-        tableView.rowHeight = uiConstants.rowHeight
-        tableView.sectionHeaderHeight = uiConstants.sectionHeaderHeight
     }
     
     private func setupObservers() {
         viewModel.datasource = MealsDetailTableViewDiffableDataSource(tableView: tableView, cellProvider: { tableView, indexPath, model in
             guard let cell = tableView.dequeueReusableCell(withIdentifier: IngredientDetailCell.reuseIdentifier, for: indexPath) as? IngredientDetailCell else { return UITableViewCell() }
-            cell.model = model
+            
+            if let ingredientModel = model as? IngredientDetail {
+                cell.ingredientModel = ingredientModel
+            }
+            
+            if let instructionModel = model as? InstructionsDetail {
+                cell.instructionModel = instructionModel
+            }
+            
             return cell
         })
     }
@@ -64,8 +70,38 @@ class MealDetailVC: UIViewController {
 
 extension MealDetailVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: HeaderView.reuseIdentifier) as? HeaderView
-        headerView?.numberOfItems = viewModel.model?.ingredientDetails?.count
-        return headerView
+        switch MealDetailSection(rawValue: section) {
+        case .mealInstructions:
+            let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: HeaderView.reuseIdentifier) as? HeaderView
+            headerView?.setup(title: "Instructions", totalItems: .zero, shouldDisplayNumberOfItems: false)
+            return headerView
+        case .mealIngredients:
+            let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: HeaderView.reuseIdentifier) as? HeaderView
+            headerView?.setup(title: "Ingredients", totalItems: viewModel.model?.ingredientDetails?.count ?? 0, shouldDisplayNumberOfItems: true)
+            return headerView
+        case .none:
+            break
+        }
+        return .none
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        switch MealDetailSection(rawValue: section) {
+        case .mealInstructions, .mealIngredients:
+            return uiConstants.sectionHeaderHeight
+        case .none:
+            return .zero
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch MealDetailSection(rawValue: indexPath.section) {
+        case .mealInstructions:
+            return UITableView.automaticDimension
+        case .mealIngredients:
+            return uiConstants.rowHeight
+        case .none:
+            return .zero
+        }
     }
 }
