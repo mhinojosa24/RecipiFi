@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import Kingfisher
 
-class MealDetailVC: UIViewController {
+class MealDetailVC: BaseVC {
     
     // NOTE: structure for UI constants
     struct UIConstants {

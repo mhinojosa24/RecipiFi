@@ -51,7 +51,7 @@ class MealCell: UITableViewCell {
         thumbnail.kf.setImage(with: imageUrl, placeholder: UIImage(systemName: "photo.fill"), options: [.transition(.fade(1)), .cacheOriginalImage])
     }
     
-    /// This method applies content shadow 
+    /// This method applies content shadow
     private func applyContentShadow() {
         contentView.layer.shadowColor = UIColor.black.cgColor
         contentView.layer.shadowOpacity = 0.8

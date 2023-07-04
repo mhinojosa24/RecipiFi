@@ -42,6 +42,8 @@
 		C7B04A082A51E24B004C1C7A /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7B04A072A51E24B004C1C7A /* HeaderView.xib */; };
 		C7B04A0C2A53566C004C1C7A /* MealDetailSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B04A0B2A53566C004C1C7A /* MealDetailSection.swift */; };
 		C7B04A0E2A535AC9004C1C7A /* Instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B04A0D2A535AC9004C1C7A /* Instructions.swift */; };
+		C7B04A122A54A13F004C1C7A /* ProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B04A112A54A13F004C1C7A /* ProgressIndicator.swift */; };
+		C7B04A142A54A197004C1C7A /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B04A132A54A197004C1C7A /* BaseVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,8 @@
 		C7B04A072A51E24B004C1C7A /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		C7B04A0B2A53566C004C1C7A /* MealDetailSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailSection.swift; sourceTree = "<group>"; };
 		C7B04A0D2A535AC9004C1C7A /* Instructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instructions.swift; sourceTree = "<group>"; };
+		C7B04A112A54A13F004C1C7A /* ProgressIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicator.swift; sourceTree = "<group>"; };
+		C7B04A132A54A197004C1C7A /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		F716FE5C51FDAC33EA6846AA /* Pods-RecipiFi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipiFi.debug.xcconfig"; path = "Target Support Files/Pods-RecipiFi/Pods-RecipiFi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				C727574A2A4E96530028C496 /* BaseVM.swift */,
+				C7B04A132A54A197004C1C7A /* BaseVC.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -272,6 +277,7 @@
 				C7B04A002A51246F004C1C7A /* IngredientDetailCell.xib */,
 				C7B04A032A51D2CA004C1C7A /* HeaderView.swift */,
 				C7B04A072A51E24B004C1C7A /* HeaderView.xib */,
+				C7B04A112A54A13F004C1C7A /* ProgressIndicator.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -496,6 +502,7 @@
 				C7B049FE2A511C78004C1C7A /* MealsDetailTableViewDiffableDataSource.swift in Sources */,
 				C773AD342A4E63C200AE959C /* MealsVC.swift in Sources */,
 				C7B049F42A4F5014004C1C7A /* MealDetailVM.swift in Sources */,
+				C7B04A142A54A197004C1C7A /* BaseVC.swift in Sources */,
 				C727574B2A4E96530028C496 /* BaseVM.swift in Sources */,
 				C72757412A4E71F70028C496 /* NetworkError.swift in Sources */,
 				C7B049FA2A4F59A7004C1C7A /* IngredientDetail.swift in Sources */,
@@ -508,6 +515,7 @@
 				C7B049F62A4F5346004C1C7A /* GetMealDetails.swift in Sources */,
 				C7B04A0C2A53566C004C1C7A /* MealDetailSection.swift in Sources */,
 				C727574D2A4E96BC0028C496 /* MealsVM.swift in Sources */,
+				C7B04A122A54A13F004C1C7A /* ProgressIndicator.swift in Sources */,
 				C72757462A4E82110028C496 /* Response.swift in Sources */,
 				C773AD682A4E6A5300AE959C /* ApiService.swift in Sources */,
 				C727573B2A4E6CE10028C496 /* ApiRequest.swift in Sources */,

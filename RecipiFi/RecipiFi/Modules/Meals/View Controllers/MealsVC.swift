@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-class MealsVC: UIViewController {
+class MealsVC: BaseVC {
     
     // NOTE: structure for UI constants
     struct UIConstants {
@@ -54,12 +54,24 @@ class MealsVC: UIViewController {
         })
         
         viewModel.$mealID.receive(on: RunLoop.main).sink(receiveValue: { id in
-            self.viewModel.callApiToGetMealDetailInfo(mealID: id) { model in
-                guard let mealDetailVC = self.storyboard?.instantiateViewController(withIdentifier: "MealDetailVC") as? MealDetailVC else { return }
-                mealDetailVC.viewModel.model = model
-                self.navigationController?.pushViewController(mealDetailVC, animated: true)
-            }
+            self.callApiToGetMealDetailInfo(id)
         }).store(in: &subscribers)
+    }
+    
+    private func callApiToGetMealDetailInfo(_ id: String) {
+        if !id.isEmpty {
+            progressIndicator.showSpinner(to: view)
+            viewModel.callApiToGetMealDetailInfo(mealID: id) { model in
+                self.progressIndicator.removeSpinner(on: self.view)
+                self.navigateToMealDetailVC(model)
+            }
+        }
+    }
+    
+    private func navigateToMealDetailVC(_ model: MealDetail?) {
+        guard let mealDetailVC = self.storyboard?.instantiateViewController(withIdentifier: "MealDetailVC") as? MealDetailVC else { return }
+        mealDetailVC.viewModel.model = model
+        navigationController?.pushViewController(mealDetailVC, animated: true)
     }
 }
 
