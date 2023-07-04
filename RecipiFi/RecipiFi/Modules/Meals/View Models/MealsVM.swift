@@ -19,15 +19,19 @@ class MealsVM: BaseVM {
     
     
     /// This method pings the api to get dessert meals
-    func callApiToGetDessertMeals() {
+    func callApiToGetDessertMeals(completionHandler: @escaping () -> Void) {
         service?.request(GetDessertMeals()) { result in
-            switch result {
-            case .success(let meals):
-                if let meals = meals { 
-                    self.updateDataSource(with: meals)
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let meals):
+                    if let meals = meals {
+                        self.updateDataSource(with: meals)
+                        completionHandler()
+                    }
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    completionHandler()
                 }
-            case .failure(let error):
-                print(error.localizedDescription)
             }
         }
     }
@@ -56,12 +60,10 @@ class MealsVM: BaseVM {
     /// This method takes a snapshot of data & diffable data source applies it with any animating difference
     /// - Parameter meals: array `Meal` Object
     private func updateDataSource(with meals: [Meal]) {
-        DispatchQueue.main.async {
-            guard self.datasource != nil else { return }
-            self.snapshot.deleteAllItems()
-            self.snapshot.appendSections([""])
-            self.snapshot.appendItems(meals, toSection: "")
-            self.datasource.apply(self.snapshot, animatingDifferences: true)
-        }
+        guard self.datasource != nil else { return }
+        self.snapshot.deleteAllItems()
+        self.snapshot.appendSections([""])
+        self.snapshot.appendItems(meals, toSection: "")
+        self.datasource.apply(self.snapshot, animatingDifferences: true)
     }
 }

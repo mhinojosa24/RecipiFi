@@ -29,7 +29,7 @@ class MealsVC: BaseVC {
         super.viewDidLoad()
         setupUI()
         setupObservers()
-        viewModel.callApiToGetDessertMeals()
+        callApiToGetDessertMeals()
     }
     
     // MARK: - User Defined Methods
@@ -56,6 +56,13 @@ class MealsVC: BaseVC {
         viewModel.$mealID.receive(on: RunLoop.main).sink(receiveValue: { id in
             self.callApiToGetMealDetailInfo(id)
         }).store(in: &subscribers)
+    }
+    
+    private func callApiToGetDessertMeals() {
+        progressIndicator.showSpinner(to: view)
+        viewModel.callApiToGetDessertMeals {
+            self.progressIndicator.removeSpinner(on: self.view)
+        }
     }
     
     private func callApiToGetMealDetailInfo(_ id: String) {
