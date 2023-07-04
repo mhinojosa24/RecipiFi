@@ -12,10 +12,13 @@ import UIKit
 
 class MealsVM: BaseVM {
     
+    // Variables & Publishers
     var datasource: MealsTableViewDiffableDataSource!
     var snapshot = NSDiffableDataSourceSnapshot<String?, Meal>()
     @Published var mealID: String = ""
     
+    
+    /// This method pings the api to get dessert meals
     func callApiToGetDessertMeals() {
         service?.request(GetDessertMeals()) { result in
             switch result {
@@ -29,6 +32,11 @@ class MealsVM: BaseVM {
         }
     }
     
+    
+    /// This method pings the api more info on specified meal
+    /// - Parameters:
+    ///   - mealID: String
+    ///   - completionHandler: returns `MealDetail` object when successful
     func callApiToGetMealDetailInfo(mealID: String, completionHandler: @escaping (MealDetail?) -> Void) {
         service?.request(GetMealDetails(mealID: mealID), completionHandler: { result in
             DispatchQueue.main.async {
@@ -45,6 +53,8 @@ class MealsVM: BaseVM {
         })
     }
     
+    /// This method takes a snapshot of data & diffable data source applies it with any animating difference
+    /// - Parameter meals: array `Meal` Object
     private func updateDataSource(with meals: [Meal]) {
         DispatchQueue.main.async {
             guard self.datasource != nil else { return }

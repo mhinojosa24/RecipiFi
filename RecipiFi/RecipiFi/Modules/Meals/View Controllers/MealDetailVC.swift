@@ -11,6 +11,7 @@ import Kingfisher
 
 class MealDetailVC: UIViewController {
     
+    // NOTE: structure for UI constants
     struct UIConstants {
         let ingredientDetailCell = UINib(nibName: IngredientDetailCell.reuseIdentifier, bundle: nil)
         let headerView = UINib(nibName: HeaderView.reuseIdentifier, bundle: nil)
@@ -19,10 +20,12 @@ class MealDetailVC: UIViewController {
         let placeHolderImage = UIImage(named: "photo.fill")
     }
     
+    // MARK: - IBOutlets
     @IBOutlet var tableView: UITableView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var thumbnailImageView: UIImageView!
     
+    // MARK: - Variables & Constants
     let uiConstants = UIConstants()
     var viewModel = MealDetailVM()
     
@@ -33,6 +36,9 @@ class MealDetailVC: UIViewController {
         viewModel.updateDataSource()
     }
     
+    // MARK: - User Defined Methods
+    
+    /// This method setup any UI configuration
     private func setupUI() {
         view.backgroundColor = self.traitCollection.userInterfaceStyle == .dark ? .black : .white
         setupIBOutlets()
@@ -51,6 +57,7 @@ class MealDetailVC: UIViewController {
         tableView.register(uiConstants.headerView, forHeaderFooterViewReuseIdentifier: HeaderView.reuseIdentifier)
     }
     
+    /// This method is purely to set up observers
     private func setupObservers() {
         viewModel.datasource = MealsDetailTableViewDiffableDataSource(tableView: tableView, cellProvider: { tableView, indexPath, model in
             guard let cell = tableView.dequeueReusableCell(withIdentifier: IngredientDetailCell.reuseIdentifier, for: indexPath) as? IngredientDetailCell else { return UITableViewCell() }
@@ -67,6 +74,9 @@ class MealDetailVC: UIViewController {
         })
     }
 }
+
+
+// MARK: - UITableView Delegates
 
 extension MealDetailVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

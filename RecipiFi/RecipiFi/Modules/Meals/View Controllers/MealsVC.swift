@@ -10,14 +10,17 @@ import Combine
 
 class MealsVC: UIViewController {
     
+    // NOTE: structure for UI constants
     struct UIConstants {
         let mealCell = UINib(nibName: String(describing: MealCell.self), bundle: nil)
         let rowHeight: CGFloat = 200
         let fallbackTableViewCell = UITableViewCell()
     }
     
+    // MARK: - IBOutlets
     @IBOutlet var tableView: UITableView!
     
+    // MARK: - Variables & Constants
     let viewModel = MealsVM()
     let uiConstants = UIConstants()
     var subscribers = Set<AnyCancellable>()
@@ -29,6 +32,9 @@ class MealsVC: UIViewController {
         viewModel.callApiToGetDessertMeals()
     }
     
+    // MARK: - User Defined Methods
+    
+    /// This method setup any UI configuration
     private func setupUI() {
         navigationController?.view.backgroundColor = .systemBackground
         tableView.delegate = self
@@ -36,6 +42,7 @@ class MealsVC: UIViewController {
         tableView.rowHeight = uiConstants.rowHeight
     }
     
+    /// This method is purely to set up observers
     private func setupObservers() {
         viewModel.datasource = MealsTableViewDiffableDataSource(tableView: tableView, cellProvider: { tableView, indexPath, model in
             guard let cell = tableView.dequeueReusableCell(withIdentifier: MealCell.reuseIdentifier, for: indexPath) as? MealCell else {
@@ -56,6 +63,8 @@ class MealsVC: UIViewController {
     }
 }
 
+
+// MARK: - UITableView Delegates
 
 extension MealsVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

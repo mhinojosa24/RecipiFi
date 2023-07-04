@@ -9,4 +9,5 @@ import Foundation
 import UIKit
 
 
+/// The object you use to manage data and provide cells for a table view.
 class MealsDetailTableViewDiffableDataSource: UITableViewDiffableDataSource<MealDetailSection, AnyHashable> {}

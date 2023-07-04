@@ -8,6 +8,7 @@
 import Foundation
 
 
+// enum type for sections in table View
 enum MealDetailSection: Int, CaseIterable {
     case mealInstructions
     case mealIngredients

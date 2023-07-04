@@ -10,6 +10,7 @@ import Kingfisher
 
 class IngredientDetailCell: UITableViewCell {
 
+    // MARK: - IBOutlet
     @IBOutlet weak var ingredientImageView: UIImageView!
     @IBOutlet weak var ingredientName: UILabel!
     @IBOutlet weak var measurement: UILabel!
@@ -17,6 +18,7 @@ class IngredientDetailCell: UITableViewCell {
     @IBOutlet weak var ingredientStackView: UIStackView!
     @IBOutlet weak var descriptionsLabel: UILabel!
     
+    // MARK: - Variables
     static var reuseIdentifier: String { String(describing: self) }
     
     var ingredientModel: IngredientDetail? {
@@ -42,6 +44,9 @@ class IngredientDetailCell: UITableViewCell {
         ingredientImageView.layer.cornerRadius = 10
     }
     
+    // MARK: - User Defined Methods
+    
+    /// This method updates UI with ingredientModel data
     private func setupUIForIngredients() {
         guard let model = ingredientModel else { return }
         instructionStackView.isHidden = true
@@ -51,6 +56,7 @@ class IngredientDetailCell: UITableViewCell {
         measurement.text = model.measurement
     }
     
+    /// This method updates UI with instructionModel data
     private func setupUIForInstructions() {
         guard let model = instructionModel else { return }
         instructionStackView.isHidden = false

@@ -9,11 +9,13 @@ import UIKit
 import Kingfisher
 
 class MealCell: UITableViewCell {
-
+    
+    // MARK: - IBOutlet
     @IBOutlet weak var thumbnail: UIImageView!
     @IBOutlet weak var thumbnailGradient: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     
+    // MARK: - Variables
     static var reuseIdentifier: String { String(describing: self) }
     
     var model: Meal? {
@@ -35,6 +37,9 @@ class MealCell: UITableViewCell {
         applyContentShadow()
     }
     
+    // MARK: - User Defined Methods
+    
+    /// This method setup any UI configuration
     private func setup() {
         guard
             let model = model,
@@ -46,6 +51,7 @@ class MealCell: UITableViewCell {
         thumbnail.kf.setImage(with: imageUrl, placeholder: UIImage(systemName: "photo.fill"), options: [.transition(.fade(1)), .cacheOriginalImage])
     }
     
+    /// This method applies content shadow 
     private func applyContentShadow() {
         contentView.layer.shadowColor = UIColor.black.cgColor
         contentView.layer.shadowOpacity = 0.8

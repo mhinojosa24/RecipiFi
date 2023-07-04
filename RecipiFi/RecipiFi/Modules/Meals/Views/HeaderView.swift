@@ -9,6 +9,7 @@ import UIKit
 
 class HeaderView: UITableViewHeaderFooterView {
     
+    // MARK: - IBOutlet
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var numberOfItemsLabel: UILabel!
     
@@ -18,6 +19,7 @@ class HeaderView: UITableViewHeaderFooterView {
         super.awakeFromNib()
     }
     
+    /// This method setup any UI configuration
     func setup(title: String, totalItems: Int, shouldDisplayNumberOfItems: Bool) {
         titleLabel.text = title
         numberOfItemsLabel.text = "\(totalItems) item"
