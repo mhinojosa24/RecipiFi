@@ -19,8 +19,14 @@
 		C727574D2A4E96BC0028C496 /* MealsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C727574C2A4E96BC0028C496 /* MealsVM.swift */; };
 		C75D5E242A54AD460030CCF6 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75D5E232A54AD460030CCF6 /* MockService.swift */; };
 		C75D5E262A54AD680030CCF6 /* Mockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75D5E252A54AD680030CCF6 /* Mockable.swift */; };
-		C75D5E2A2A54B0C80030CCF6 /* MockData.json in Sources */ = {isa = PBXBuildFile; fileRef = C75D5E292A54B0C80030CCF6 /* MockData.json */; };
 		C75D5E2C2A54B3010030CCF6 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75D5E2B2A54B3010030CCF6 /* MockURLProtocol.swift */; };
+		C75D5E2E2A54B3F30030CCF6 /* MockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75D5E2D2A54B3F30030CCF6 /* MockViewModel.swift */; };
+		C75D5E302A54B6D90030CCF6 /* MockGetDessertAPIRequst.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75D5E2F2A54B6D90030CCF6 /* MockGetDessertAPIRequst.swift */; };
+		C75D5E322A54BBC10030CCF6 /* DessertDetailsMockData.json in Sources */ = {isa = PBXBuildFile; fileRef = C75D5E312A54BBC10030CCF6 /* DessertDetailsMockData.json */; };
+		C75D5E342A54C51B0030CCF6 /* MockGetDessertDetailsApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75D5E332A54C51B0030CCF6 /* MockGetDessertDetailsApiRequest.swift */; };
+		C75D5E362A5594F80030CCF6 /* DessertMealsMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = C75D5E292A54B0C80030CCF6 /* DessertMealsMockData.json */; };
+		C75D5E372A5595570030CCF6 /* DessertMealsMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = C75D5E292A54B0C80030CCF6 /* DessertMealsMockData.json */; };
+		C75D5E382A5595980030CCF6 /* DessertDetailsMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = C75D5E312A54BBC10030CCF6 /* DessertDetailsMockData.json */; };
 		C773AD302A4E63C200AE959C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C773AD2F2A4E63C200AE959C /* AppDelegate.swift */; };
 		C773AD322A4E63C200AE959C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C773AD312A4E63C200AE959C /* SceneDelegate.swift */; };
 		C773AD342A4E63C200AE959C /* MealsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C773AD332A4E63C200AE959C /* MealsVC.swift */; };
@@ -81,8 +87,12 @@
 		C727574C2A4E96BC0028C496 /* MealsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsVM.swift; sourceTree = "<group>"; };
 		C75D5E232A54AD460030CCF6 /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
 		C75D5E252A54AD680030CCF6 /* Mockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mockable.swift; sourceTree = "<group>"; };
-		C75D5E292A54B0C80030CCF6 /* MockData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockData.json; sourceTree = "<group>"; };
+		C75D5E292A54B0C80030CCF6 /* DessertMealsMockData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DessertMealsMockData.json; sourceTree = "<group>"; };
 		C75D5E2B2A54B3010030CCF6 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		C75D5E2D2A54B3F30030CCF6 /* MockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewModel.swift; sourceTree = "<group>"; };
+		C75D5E2F2A54B6D90030CCF6 /* MockGetDessertAPIRequst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetDessertAPIRequst.swift; sourceTree = "<group>"; };
+		C75D5E312A54BBC10030CCF6 /* DessertDetailsMockData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DessertDetailsMockData.json; sourceTree = "<group>"; };
+		C75D5E332A54C51B0030CCF6 /* MockGetDessertDetailsApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetDessertDetailsApiRequest.swift; sourceTree = "<group>"; };
 		C773AD2C2A4E63C200AE959C /* RecipiFi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipiFi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C773AD2F2A4E63C200AE959C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C773AD312A4E63C200AE959C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -178,8 +188,10 @@
 			isa = PBXGroup;
 			children = (
 				C75D5E272A54B0500030CCF6 /* Mock Data Model */,
+				C75D5E352A5590F40030CCF6 /* MockApiRequest */,
 				C75D5E232A54AD460030CCF6 /* MockService.swift */,
 				C75D5E252A54AD680030CCF6 /* Mockable.swift */,
+				C75D5E2D2A54B3F30030CCF6 /* MockViewModel.swift */,
 			);
 			path = "Mock Network";
 			sourceTree = "<group>";
@@ -187,9 +199,19 @@
 		C75D5E272A54B0500030CCF6 /* Mock Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				C75D5E292A54B0C80030CCF6 /* MockData.json */,
+				C75D5E292A54B0C80030CCF6 /* DessertMealsMockData.json */,
+				C75D5E312A54BBC10030CCF6 /* DessertDetailsMockData.json */,
 			);
 			path = "Mock Data Model";
+			sourceTree = "<group>";
+		};
+		C75D5E352A5590F40030CCF6 /* MockApiRequest */ = {
+			isa = PBXGroup;
+			children = (
+				C75D5E2F2A54B6D90030CCF6 /* MockGetDessertAPIRequst.swift */,
+				C75D5E332A54C51B0030CCF6 /* MockGetDessertDetailsApiRequest.swift */,
+			);
+			path = MockApiRequest;
 			sourceTree = "<group>";
 		};
 		C773AD232A4E63C200AE959C = {
@@ -467,6 +489,7 @@
 				C773AD392A4E63C400AE959C /* Assets.xcassets in Resources */,
 				C7B04A082A51E24B004C1C7A /* HeaderView.xib in Resources */,
 				C773AD372A4E63C200AE959C /* Main.storyboard in Resources */,
+				C75D5E372A5595570030CCF6 /* DessertMealsMockData.json in Resources */,
 				C7B04A022A51246F004C1C7A /* IngredientDetailCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,6 +498,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C75D5E362A5594F80030CCF6 /* DessertMealsMockData.json in Resources */,
+				C75D5E382A5595980030CCF6 /* DessertDetailsMockData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +562,7 @@
 				C7B049EE2A4F2F35004C1C7A /* MealsTableViewDiffableDataSource.swift in Sources */,
 				C7B049FE2A511C78004C1C7A /* MealsDetailTableViewDiffableDataSource.swift in Sources */,
 				C773AD342A4E63C200AE959C /* MealsVC.swift in Sources */,
+				C75D5E342A54C51B0030CCF6 /* MockGetDessertDetailsApiRequest.swift in Sources */,
 				C7B049F42A4F5014004C1C7A /* MealDetailVM.swift in Sources */,
 				C7B04A142A54A197004C1C7A /* BaseVC.swift in Sources */,
 				C727574B2A4E96530028C496 /* BaseVM.swift in Sources */,
@@ -548,21 +574,23 @@
 				C727573D2A4E6D6C0028C496 /* URLSession.swift in Sources */,
 				C7B04A0E2A535AC9004C1C7A /* Instructions.swift in Sources */,
 				C72757482A4E82770028C496 /* Meal.swift in Sources */,
+				C75D5E2E2A54B3F30030CCF6 /* MockViewModel.swift in Sources */,
 				C75D5E262A54AD680030CCF6 /* Mockable.swift in Sources */,
 				C7B049F62A4F5346004C1C7A /* GetMealDetails.swift in Sources */,
 				C7B04A0C2A53566C004C1C7A /* MealDetailSection.swift in Sources */,
 				C727574D2A4E96BC0028C496 /* MealsVM.swift in Sources */,
 				C7B04A122A54A13F004C1C7A /* ProgressIndicator.swift in Sources */,
-				C75D5E2A2A54B0C80030CCF6 /* MockData.json in Sources */,
 				C72757462A4E82110028C496 /* Response.swift in Sources */,
 				C773AD682A4E6A5300AE959C /* ApiService.swift in Sources */,
 				C727573B2A4E6CE10028C496 /* ApiRequest.swift in Sources */,
 				C727573F2A4E6F850028C496 /* EndPoint.swift in Sources */,
 				C7B049FC2A4FA509004C1C7A /* MealDetail.swift in Sources */,
+				C75D5E302A54B6D90030CCF6 /* MockGetDessertAPIRequst.swift in Sources */,
 				C75D5E242A54AD460030CCF6 /* MockService.swift in Sources */,
 				C72757432A4E7FA90028C496 /* GetDessertMeals.swift in Sources */,
 				C773AD322A4E63C200AE959C /* SceneDelegate.swift in Sources */,
 				C7B04A042A51D2CA004C1C7A /* HeaderView.swift in Sources */,
+				C75D5E322A54BBC10030CCF6 /* DessertDetailsMockData.json in Sources */,
 				C7B04A012A51246F004C1C7A /* IngredientDetailCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
