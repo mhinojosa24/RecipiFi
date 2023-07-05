@@ -7,11 +7,15 @@
 
 import Foundation
 
+protocol MockService: Service, Mockable {
+    func request<T>(_ resource: ApiRequest<T>, mockFileName: MockDataFileName, completionHandler: @escaping ApiHandler<T>)
+}
 
 /// This class sole purpose is to mock `Service` class functionality
-class MockService: Service, Mockable {
-    func request<T>(_ resource: ApiRequest<T>, completionHandler: @escaping ApiHandler<T>)  {
-        return loadJson(filename: "MockData",
+class MockApiService: MockService {
+    
+    func request<T>(_ resource: ApiRequest<T>, mockFileName: MockDataFileName, completionHandler: @escaping ApiHandler<T>)  {
+        return loadJson(filename: mockFileName,
                         extensionType: .json,
                         type: JSONDictionary.self) { result in
             switch result {
@@ -21,5 +25,11 @@ class MockService: Service, Mockable {
                 completionHandler(.failure(error))
             }
         }
+    }
+}
+
+extension MockApiService {
+    func request<T>(_ request: ApiRequest<T>, completionHandler: @escaping ApiHandler<T>) {
+        
     }
 }
