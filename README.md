@@ -27,7 +27,7 @@ application architecture.
 
 1. Must have Xcode installed 
 2. Download zip & unzip file
-3. Make sure `RecipiFi.xcworkspace` is selected upon opening project
+3. Make sure `RecipiFi.xcodeproj` is selected upon opening project
 4. Start off with a clean slate by pressing this command `Shift-Command-K`
 5. Select available iOS simulator before launching 
 6. Press `Command-R` to launch application

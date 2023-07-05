@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		690E0B41A251FE22AAB3B20B /* Pods_RecipiFi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EAB098128A419E1E4AEB6D /* Pods_RecipiFi.framework */; };
+		C7128F852A56116700D1D844 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C7128F842A56116700D1D844 /* Kingfisher */; };
 		C727573B2A4E6CE10028C496 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C727573A2A4E6CE10028C496 /* ApiRequest.swift */; };
 		C727573D2A4E6D6C0028C496 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C727573C2A4E6D6C0028C496 /* URLSession.swift */; };
 		C727573F2A4E6F850028C496 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C727573E2A4E6F850028C496 /* EndPoint.swift */; };
@@ -72,8 +72,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A7EAB098128A419E1E4AEB6D /* Pods_RecipiFi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipiFi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BDBA25139D8CDA5238F69930 /* Pods-RecipiFi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipiFi.release.xcconfig"; path = "Target Support Files/Pods-RecipiFi/Pods-RecipiFi.release.xcconfig"; sourceTree = "<group>"; };
 		C727573A2A4E6CE10028C496 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		C727573C2A4E6D6C0028C496 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
 		C727573E2A4E6F850028C496 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 		C7B04A0D2A535AC9004C1C7A /* Instructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instructions.swift; sourceTree = "<group>"; };
 		C7B04A112A54A13F004C1C7A /* ProgressIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicator.swift; sourceTree = "<group>"; };
 		C7B04A132A54A197004C1C7A /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
-		F716FE5C51FDAC33EA6846AA /* Pods-RecipiFi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipiFi.debug.xcconfig"; path = "Target Support Files/Pods-RecipiFi/Pods-RecipiFi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				690E0B41A251FE22AAB3B20B /* Pods_RecipiFi.framework in Frameworks */,
+				C7128F852A56116700D1D844 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,8 +216,6 @@
 				C773AD452A4E63C400AE959C /* RecipiFiTests */,
 				C773AD4F2A4E63C400AE959C /* RecipiFiUITests */,
 				C773AD2D2A4E63C200AE959C /* Products */,
-				D1FDAD5D59656EA8CCB4CA03 /* Pods */,
-				F89FCF58681708C6D201CA52 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -359,23 +354,6 @@
 			path = UIComponents;
 			sourceTree = "<group>";
 		};
-		D1FDAD5D59656EA8CCB4CA03 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F716FE5C51FDAC33EA6846AA /* Pods-RecipiFi.debug.xcconfig */,
-				BDBA25139D8CDA5238F69930 /* Pods-RecipiFi.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		F89FCF58681708C6D201CA52 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A7EAB098128A419E1E4AEB6D /* Pods_RecipiFi.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -383,17 +361,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C773AD562A4E63C400AE959C /* Build configuration list for PBXNativeTarget "RecipiFi" */;
 			buildPhases = (
-				8DC599A44F8F729EA724B16C /* [CP] Check Pods Manifest.lock */,
 				C773AD282A4E63C200AE959C /* Sources */,
 				C773AD292A4E63C200AE959C /* Frameworks */,
 				C773AD2A2A4E63C200AE959C /* Resources */,
-				7C37C68449FEC73987D631CE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = RecipiFi;
+			packageProductDependencies = (
+				C7128F842A56116700D1D844 /* Kingfisher */,
+			);
 			productName = RecipiFi;
 			productReference = C773AD2C2A4E63C200AE959C /* RecipiFi.app */;
 			productType = "com.apple.product-type.application";
@@ -466,6 +445,9 @@
 				Base,
 			);
 			mainGroup = C773AD232A4E63C200AE959C;
+			packageReferences = (
+				C7128F832A56116700D1D844 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = C773AD2D2A4E63C200AE959C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -508,48 +490,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		7C37C68449FEC73987D631CE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RecipiFi/Pods-RecipiFi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RecipiFi/Pods-RecipiFi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RecipiFi/Pods-RecipiFi-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8DC599A44F8F729EA724B16C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RecipiFi-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C773AD282A4E63C200AE959C /* Sources */ = {
@@ -760,7 +700,6 @@
 		};
 		C773AD572A4E63C400AE959C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F716FE5C51FDAC33EA6846AA /* Pods-RecipiFi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -794,7 +733,6 @@
 		};
 		C773AD582A4E63C400AE959C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BDBA25139D8CDA5238F69930 /* Pods-RecipiFi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -942,6 +880,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C7128F832A56116700D1D844 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.6.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C7128F842A56116700D1D844 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C7128F832A56116700D1D844 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C773AD242A4E63C200AE959C /* Project object */;
 }
