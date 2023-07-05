@@ -22,11 +22,9 @@
 		C75D5E2C2A54B3010030CCF6 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75D5E2B2A54B3010030CCF6 /* MockURLProtocol.swift */; };
 		C75D5E2E2A54B3F30030CCF6 /* MockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75D5E2D2A54B3F30030CCF6 /* MockViewModel.swift */; };
 		C75D5E302A54B6D90030CCF6 /* MockGetDessertAPIRequst.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75D5E2F2A54B6D90030CCF6 /* MockGetDessertAPIRequst.swift */; };
-		C75D5E322A54BBC10030CCF6 /* DessertDetailsMockData.json in Sources */ = {isa = PBXBuildFile; fileRef = C75D5E312A54BBC10030CCF6 /* DessertDetailsMockData.json */; };
 		C75D5E342A54C51B0030CCF6 /* MockGetDessertDetailsApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75D5E332A54C51B0030CCF6 /* MockGetDessertDetailsApiRequest.swift */; };
-		C75D5E362A5594F80030CCF6 /* DessertMealsMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = C75D5E292A54B0C80030CCF6 /* DessertMealsMockData.json */; };
 		C75D5E372A5595570030CCF6 /* DessertMealsMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = C75D5E292A54B0C80030CCF6 /* DessertMealsMockData.json */; };
-		C75D5E382A5595980030CCF6 /* DessertDetailsMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = C75D5E312A54BBC10030CCF6 /* DessertDetailsMockData.json */; };
+		C75D5E392A559DD40030CCF6 /* DessertDetailsMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = C75D5E312A54BBC10030CCF6 /* DessertDetailsMockData.json */; };
 		C773AD302A4E63C200AE959C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C773AD2F2A4E63C200AE959C /* AppDelegate.swift */; };
 		C773AD322A4E63C200AE959C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C773AD312A4E63C200AE959C /* SceneDelegate.swift */; };
 		C773AD342A4E63C200AE959C /* MealsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C773AD332A4E63C200AE959C /* MealsVC.swift */; };
@@ -491,6 +489,7 @@
 				C773AD372A4E63C200AE959C /* Main.storyboard in Resources */,
 				C75D5E372A5595570030CCF6 /* DessertMealsMockData.json in Resources */,
 				C7B04A022A51246F004C1C7A /* IngredientDetailCell.xib in Resources */,
+				C75D5E392A559DD40030CCF6 /* DessertDetailsMockData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,8 +497,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C75D5E362A5594F80030CCF6 /* DessertMealsMockData.json in Resources */,
-				C75D5E382A5595980030CCF6 /* DessertDetailsMockData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,7 +587,6 @@
 				C72757432A4E7FA90028C496 /* GetDessertMeals.swift in Sources */,
 				C773AD322A4E63C200AE959C /* SceneDelegate.swift in Sources */,
 				C7B04A042A51D2CA004C1C7A /* HeaderView.swift in Sources */,
-				C75D5E322A54BBC10030CCF6 /* DessertDetailsMockData.json in Sources */,
 				C7B04A012A51246F004C1C7A /* IngredientDetailCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

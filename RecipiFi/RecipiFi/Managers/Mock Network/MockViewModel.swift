@@ -35,11 +35,14 @@ class MockViewModel {
         })
     }
     
-    func callApiToGetDessertDetails(completionHandler: @escaping (Result<[MealDetail], Error>) -> Void) {
+    func callApiToGetDessertDetails(completionHandler: @escaping (Result<MealDetail, Error>) -> Void) {
         service?.request(mockGetDessertDetailsApiRequest, mockFileName: .dessertDetails, completionHandler: { result in
             switch result {
             case .success(let mealDetails):
-                break
+                if let mealDetails = mealDetails as? MealDetail {
+                    print(mealDetails)
+                    completionHandler(.success(mealDetails))
+                }
             case .failure(let error):
                 completionHandler(.failure(error))
             }

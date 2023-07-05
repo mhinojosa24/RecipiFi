@@ -19,7 +19,6 @@ class MockGetDessertApiRequest: ApiRequest<[Meal]> {
             var meals: [Meal]?
             do {
                 meals = try JSONDecoder().decode([Meal].self, from: jsonData)
-                print(meals)
             } catch {
                 print("MOCK ERROR: Parsing Error")
             }
