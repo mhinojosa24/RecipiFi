@@ -40,7 +40,6 @@ class MockViewModel {
             switch result {
             case .success(let mealDetails):
                 if let mealDetails = mealDetails as? MealDetail {
-                    print(mealDetails)
                     completionHandler(.success(mealDetails))
                 }
             case .failure(let error):

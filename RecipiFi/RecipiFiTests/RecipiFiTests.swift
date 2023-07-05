@@ -83,6 +83,7 @@ final class RecipiFiTests: XCTestCase {
             switch result {
             case .success(let mealDetails):
                 XCTAssertEqual(mealDetails.idMeal, "53049")
+                XCTAssertEqual(mealDetails.strMeal, "Apam balik")
                 expectation.fulfill()
             case .failure(let error):
                 XCTAssertThrowsError(error)
