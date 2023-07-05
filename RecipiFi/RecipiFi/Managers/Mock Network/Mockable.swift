@@ -12,21 +12,25 @@ enum FileExtensionType: String {
     case json = ".json"
 }
 
+enum MockDataFileName: String {
+    case dessertMeals = "DessertMealsMockData"
+    case dessertDetails = "DessertDetailsMockData"
+}
 
 /// This protocol is utilized to load mock data
 protocol Mockable: AnyObject {
-    func loadJson<T>(filename: String,
+    func loadJson<T>(filename: MockDataFileName,
                                 extensionType: FileExtensionType,
                                 type: T.Type,
                                 completion: @escaping (Result<T, Error>) -> Void)
     
-    func loadJsonData(filename: String, extensionType: FileExtensionType) -> Data?
+    func loadJsonData(filename: MockDataFileName, extensionType: FileExtensionType) -> Data?
 }
 
 extension Mockable {
     
-    func loadJson<T>(filename: String, extensionType: FileExtensionType, type: T.Type,  completion: @escaping (Result<T, Error>) -> Void) {
-        guard let path = Bundle.main.path(forResource: filename, ofType: extensionType.rawValue) else {
+    func loadJson<T>(filename: MockDataFileName, extensionType: FileExtensionType, type: T.Type,  completion: @escaping (Result<T, Error>) -> Void) {
+        guard let path = Bundle.main.path(forResource: filename.rawValue, ofType: extensionType.rawValue) else {
             fatalError("Failed to load Json file.")
         }
         
@@ -42,8 +46,8 @@ extension Mockable {
         }
     }
     
-    func loadJsonData(filename: String, extensionType: FileExtensionType) -> Data? {
-        guard let path = Bundle.main.path(forResource: filename, ofType: extensionType.rawValue) else {
+    func loadJsonData(filename: MockDataFileName, extensionType: FileExtensionType) -> Data? {
+        guard let path = Bundle.main.path(forResource: filename.rawValue, ofType: extensionType.rawValue) else {
             fatalError("Failed to load Json file.")
         }
         
