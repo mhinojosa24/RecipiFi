@@ -18,10 +18,16 @@ class MockViewModel {
         self.service = service
     }
     
+    
+    /// This method loads a mock  data
+    /// - Parameter type: MockDataFileName
+    /// - Returns: Optional Data Type
     func loadMockData(type: MockDataFileName) -> Data? {
         return service?.loadJsonData(filename: type, extensionType: .json)
     }
     
+    /// This method pings the mock service layer to get dessert meals
+    /// - Parameter completionHandler: returns `Meal` object when successful otherwise results in failure
     func callApiToGetDessertMeals(completionHandler: @escaping (Result<[Meal], Error>) -> Void) {
         service?.request(mockGetDessertApiRequest, mockFileName: .dessertMeals, completionHandler: { result in
             switch result {
@@ -35,6 +41,8 @@ class MockViewModel {
         })
     }
     
+    /// This method pings the mock service layer to get meal details
+    /// - Parameter completionHandler: returns `MealDetail` object when successful otherwise results in failure
     func callApiToGetDessertDetails(completionHandler: @escaping (Result<MealDetail, Error>) -> Void) {
         service?.request(mockGetDessertDetailsApiRequest, mockFileName: .dessertDetails, completionHandler: { result in
             switch result {

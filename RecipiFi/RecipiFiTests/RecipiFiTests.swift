@@ -25,7 +25,8 @@ final class RecipiFiTests: XCTestCase {
         super.tearDown()
     }
     
-    func testMockGetDessertApiRequest() throws {
+    // Testing mock api requests
+    func testMockApiRequests() throws {
         let getDessertRequest = mockViewModel.mockGetDessertApiRequest
         XCTAssertTrue(getDessertRequest.url.scheme == "https")
         XCTAssertTrue(getDessertRequest.url.host() == Bundle.main.infoDictionary?["SERVER_URL"] as? String ?? "")
@@ -39,6 +40,7 @@ final class RecipiFiTests: XCTestCase {
         XCTAssertTrue(getDessertDetailsRequest.url.query() == "i=53049")
     }
     
+    // Testing successful response of dessert meals
     func testGetDessertMeals() throws {
         let response = HTTPURLResponse(url: mockViewModel.mockGetDessertApiRequest.url,
                                        statusCode: 200,
@@ -65,6 +67,7 @@ final class RecipiFiTests: XCTestCase {
         wait(for: [expectation], timeout: 2)
     }
     
+    // Testing successful response of meal details
     func testGetDessertDetails() throws {
         let response = HTTPURLResponse(url: mockViewModel.mockGetDessertDetailsApiRequest.url,
                                        statusCode: 200,
